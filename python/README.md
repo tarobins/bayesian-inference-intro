@@ -1,28 +1,25 @@
-# The Complete Bayesian Modeling Masterclass in Python
-### *From Classical Frequentist Estimation to Production MCMC & Dynamic Bayesian Reliability*
+# Bayesian Inference Masterclass: Python Track 🐍
 
-This repository contains a comprehensive 6-part hands-on curriculum for parameter estimation, convergence diagnosis, and posterior prediction using **Python** (`numpy`, `scipy`, `matplotlib`, `pandas`, `seaborn`).
-
----
-
-## 📚 Curriculum Structure
-
-| Notebook | Title | Core Concept | Primary Tools |
-| :--- | :--- | :--- | :--- |
-| **[00_START_HERE.ipynb](00_START_HERE.ipynb)** | **Course Syllabus & Overview** | Course roadmap, comparison matrices, and quick-start links | Jupyter |
-| **[01_frequentist_vs_grid_approximation.ipynb](01_frequentist_vs_grid_approximation.ipynb)** | **Foundations: Frequentist vs. Grid Approx** | Generative models, CI vs. Credible Intervals, 7 Deep Dives, Prior sensitivity & shrinkage | `scipy.stats`, `np.meshgrid`, `stats.norm` |
-| **[02_quadratic_laplace_approximation.ipynb](02_quadratic_laplace_approximation.ipynb)** | **Rapid Prototyping: Quadratic (Laplace) Approx** | Parabolic log-posteriors, inverting the Hessian matrix, Multivariate Normal draws | `scipy.optimize.minimize(method='BFGS')`, `np.random.multivariate_normal` |
-| **[03_mcmc_mechanics_from_scratch.ipynb](03_mcmc_mechanics_from_scratch.ipynb)** | **First Principles: MCMC Mechanics from Scratch** | Detailed balance, 3-step Metropolis rule, step-size tuning failure modes, autocorrelation decay | Pure NumPy / SciPy (`np.random.uniform`, `np.random.normal`, ACF) |
-| **[04_mcmc_production_diagnostics.ipynb](04_mcmc_production_diagnostics.ipynb)** | **Production Scale: Multi-Chain MCMC & Diagnostics** | Multi-chain convergence, Gelman-Rubin $\hat{R}$, Effective Sample Size ($ESS$), HMC physics, WAIC & LOO model comparison | Multi-chain array runner, Gelman-Rubin $\hat{R}$, $ESS$, WAIC |
-| **[05_bonus_real_world_bayesian_flakiness.ipynb](05_bonus_real_world_bayesian_flakiness.ipynb)** | **Bonus: Real-World CI Test Flakiness** | Beta-Binomial conjugacy, online real-time updating in CI pipelines, automated quarantine rules, exponential memory decay | `scipy.stats.beta` (pdf, cdf, ppf, rvs) |
-| **[06_calibrating_bayesian_decay_and_memory.ipynb
-- [Sheet 7: Bayesian Decision Theory & Predictive Checks](07_bayesian_decision_theory_and_predictive_checks.ipynb)](06_calibrating_bayesian_decay_and_memory.ipynb
-- [Sheet 7: Bayesian Decision Theory & Predictive Checks](07_bayesian_decision_theory_and_predictive_checks.ipynb))** | **Sheet 6: Calibrating Memory Decay ($\gamma$)** | Half-life derivation, steady-state $N_{\text{eff}}$, SLA de-quarantine recovery, pre-quential backtesting | `scipy.stats.betabinom`, dynamic discount filters |
+Welcome to the **Python Track** of the Bayesian Inference Masterclass! This track provides complete implementations of all foundational principles, numerical algorithms, diagnostics, dynamic filtering, and decision theory using **NumPy**, **SciPy**, **Matplotlib**, and **Pandas**.
 
 ---
 
-## 🛠️ Environment Prerequisites
+## 📚 Course Syllabus & Learning Progression
 
-- **Python version**: 3.12+
-- **Python Packages**: `numpy`, `scipy`, `matplotlib`, `pandas`, `seaborn`
-- **Jupyter**: Jupyter Notebook / JupyterLab with `python3` kernel support
+| Sheet | Notebook | Core Focus & Techniques |
+| :--- | :--- | :--- |
+| **00** | **[00_START_HERE.ipynb](00_START_HERE.ipynb)** | Syllabus, environment verification, Decision Guide & Rosetta Stone |
+| **01** | **[01_foundations_and_conjugate_updating.ipynb](01_foundations_and_conjugate_updating.ipynb)** | Exact Beta-Binomial conjugacy, Euler integral, Dutch books, Laplace Rule of Succession, online CI tracking |
+| **02** | **[02_frequentist_vs_grid_approximation.ipynb](02_frequentist_vs_grid_approximation.ipynb)** | Frequentist $t$-test vs. 2D Grid Approximation, prior shrinkage & sensitivity |
+| **03** | **[03_quadratic_laplace_approximation.ipynb](03_quadratic_laplace_approximation.ipynb)** | Fast prototyping with `scipy.optimize.minimize`, inverting Hessian matrix, multivariate normal draws |
+| **04** | **[04_mcmc_mechanics_from_scratch.ipynb](04_mcmc_mechanics_from_scratch.ipynb)** | Metropolis-Hastings from first principles, detailed balance, proposal step-size tuning |
+| **05** | **[05_mcmc_production_diagnostics.ipynb](05_mcmc_production_diagnostics.ipynb)** | Multi-chain sampling, Gelman-Rubin $\hat{R}$, Effective Sample Size ($ESS$), WAIC, and PSIS-LOO |
+| **06** | **[06_calibrating_bayesian_decay_and_memory.ipynb](06_calibrating_bayesian_decay_and_memory.ipynb)** | Dynamic non-stationary state filtering, exponential memory decay ($\gamma$), pre-quential backtesting |
+| **07** | **[07_bayesian_decision_theory_and_predictive_checks.ipynb](07_bayesian_decision_theory_and_predictive_checks.ipynb)** | Actionable systems, $L_2$ vs $L_1$ vs $L_0$ loss, asymmetric business loss cutoffs, Prior & Posterior Predictive Checks |
+
+---
+
+## 🛠️ Environment Setup
+- Python 3.12+
+- `pip install numpy scipy matplotlib pandas seaborn`
+- Kernel: `Python 3 (ipykernel)`
