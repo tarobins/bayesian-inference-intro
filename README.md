@@ -59,8 +59,10 @@ Use this reference matrix to select the right inferential paradigm for your prob
 ## 🧭 Repository Layout
 
 ```
-bayesian_inference_intro/
-├── README.md                                  <-- Master course syllabus & overview (You are here)
+bayesian-inference-intro/
+├── README.md                                  <-- Master course syllabus & setup guide (You are here)
+├── requirements.txt                           <-- Python dependencies & Jupyter packages
+├── install_packages.R                         <-- R package installation & IRkernel registration script
 ├── r/                                         <-- R Track (IRkernel)
 │   ├── README.md                              <-- R track setup & guide
 │   ├── 00_START_HERE.ipynb                    <-- R Course syllabus & Decision Guide
@@ -85,26 +87,94 @@ bayesian_inference_intro/
 
 ---
 
-## 🛠️ Environment Prerequisites & Setup
+## 🛠️ Step-by-Step Server & Library Setup
 
-### R Track Prerequisites
-- **R Version**: 4.6.1+
-- **Packages**: `IRkernel`, `rethinking`, `coda`, `loo`, `MASS`
-- **Jupyter Kernel**: `R` (`ir`)
+Follow these instructions to configure your environment and run the worksheets locally.
 
-### Python Track Prerequisites
-- **Python Version**: 3.12+
-- **Packages**: `numpy`, `scipy`, `matplotlib`, `pandas`, `seaborn`
-- **Jupyter Kernel**: `Python 3 (ipykernel)`
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/tarobins/bayesian-inference-intro.git
+cd bayesian-inference-intro
+```
 
 ---
 
-## 🚀 Running the Notebooks
+### Step 2: Python Track Setup 🐍
 
-Launch Jupyter from the parent directory:
+1. **Create and activate a virtual environment**:
+   - **macOS / Linux**:
+     ```bash
+     python3 -m venv .venv
+     source .venv/bin/activate
+     ```
+   - **Windows (PowerShell)**:
+     ```powershell
+     python -m venv .venv
+     .venv\Scripts\Activate.ps1
+     ```
+   - **Windows (Command Prompt)**:
+     ```cmd
+     python -m venv .venv
+     .venv\Scripts\activate.bat
+     ```
+
+2. **Install dependencies**:
+   ```bash
+   pip install --upgrade pip
+   pip install -r requirements.txt
+   ```
+
+3. **Register the Python kernel with Jupyter**:
+   ```bash
+   python -m ipykernel install --user --name bayesian-intro --display-name "Python 3 (Bayesian Intro)"
+   ```
+
+4. **Verify Python installation**:
+   ```bash
+   python -c "import numpy, scipy, matplotlib, pandas, seaborn; print('Python dependencies successfully verified!')"
+   ```
+
+---
+
+### Step 3: R Track Setup 🔵
+
+1. **Prerequisites**: Ensure [R](https://cloud.r-project.org/) (version 4.0 or higher) is installed on your system.
+
+2. **Run the automated R package setup script**:
+   ```bash
+   Rscript install_packages.R
+   ```
+   *This installs `coda`, `loo`, `MASS`, `IRkernel`, and registers the R kernel with your local Jupyter installation.*
+
+3. **Verify R installation & kernel**:
+   ```bash
+   Rscript -e "coda::gelman.diag; cat('R dependencies verified!\n')"
+   ```
+
+---
+
+### Step 4: Launching the Jupyter Server 🚀
+
+From inside the `bayesian-inference-intro` directory with your virtual environment active:
+
 ```bash
-jupyter notebook --notebook-dir="C:\Users\tarob\scratch\jupyter_notebooks"
+jupyter lab
 ```
+*(Or launch the classic notebook interface with `jupyter notebook`)*
 
-1. Navigate to **`bayesian_inference_intro/`**.
-2. Choose **`r/00_START_HERE.ipynb`** for the R experience, or **`python/00_START_HERE.ipynb`** for the Python experience.
+Once the browser opens:
+- For Python: navigate to `python/` and open `00_START_HERE.ipynb` (Kernel: **`Python 3 (Bayesian Intro)`**).
+- For R: navigate to `r/` and open `00_START_HERE.ipynb` (Kernel: **`R`**).
+
+---
+
+### Alternative: Running in VS Code or Positron 💻
+
+If you prefer an IDE:
+1. Open the cloned folder in **VS Code**: `code .`
+2. Install the **Python** and **Jupyter** extensions (and optionally the **R** extension).
+3. Open any `.ipynb` file in `python/` or `r/`.
+4. Click the kernel picker in the top-right corner:
+   - For Python: select `.venv (Python 3.x)`.
+   - For R: select `R (ir)`.

@@ -1,6 +1,6 @@
-# Bayesian Inference: A Practical Introduction: Python Track 🐍
+# Bayesian Inference: A Practical Introduction — Python Track 🐍
 
-Welcome to the **Python Track** of the Bayesian Inference: A Practical Introduction! This track provides complete implementations of all foundational principles, numerical algorithms, diagnostics, dynamic filtering, and decision theory using **NumPy**, **SciPy**, **Matplotlib**, and **Pandas**.
+Welcome to the **Python Track** of the Bayesian Inference curriculum! This track provides complete implementations of all foundational principles, numerical algorithms, diagnostics, dynamic filtering, and decision theory using **NumPy**, **SciPy**, **Matplotlib**, and **Pandas**.
 
 ---
 
@@ -19,7 +19,32 @@ Welcome to the **Python Track** of the Bayesian Inference: A Practical Introduct
 
 ---
 
-## 🛠️ Environment Setup
-- Python 3.12+
-- `pip install numpy scipy matplotlib pandas seaborn`
-- Kernel: `Python 3 (ipykernel)`
+## 🛠️ Quickstart: Environment Setup
+
+From the repository root (`bayesian-inference-intro/`):
+
+1. **Create and activate a virtual environment**:
+   ```bash
+   python -m venv .venv
+   # macOS / Linux:
+   source .venv/bin/activate
+   # Windows (PowerShell):
+   .venv\Scripts\Activate.ps1
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   pip install --upgrade pip
+   pip install -r requirements.txt
+   ```
+
+3. **Register kernel**:
+   ```bash
+   python -m ipykernel install --user --name bayesian-intro --display-name "Python 3 (Bayesian Intro)"
+   ```
+
+4. **Launch Jupyter**:
+   ```bash
+   jupyter lab
+   ```
+   Open `00_START_HERE.ipynb` to verify your environment!

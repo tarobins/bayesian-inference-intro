@@ -1,6 +1,6 @@
-# Bayesian Inference: A Practical Introduction: R Track 🔵
+# Bayesian Inference: A Practical Introduction — R Track 🔵
 
-Welcome to the **R Track** of the Bayesian Inference: A Practical Introduction! This track provides complete implementations of all foundational principles, numerical algorithms, diagnostics, dynamic filtering, and decision theory using **Base R**, `optim`, `rethinking` (Stan HMC), `coda`, and `loo`.
+Welcome to the **R Track** of the Bayesian Inference curriculum! This track provides complete implementations of all foundational principles, numerical algorithms, diagnostics, dynamic filtering, and decision theory using **Base R**, `optim`, `rethinking` (Stan HMC), `coda`, and `loo`.
 
 ---
 
@@ -19,7 +19,21 @@ Welcome to the **R Track** of the Bayesian Inference: A Practical Introduction! 
 
 ---
 
-## 🛠️ Environment Setup
-- R 4.6.1+ with `IRkernel`
-- Packages: `install.packages(c("rethinking", "coda", "loo", "MASS"))`
-- Kernel: `R (ir)`
+## 🛠️ Quickstart: Environment Setup
+
+From the repository root (`bayesian-inference-intro/`):
+
+1. **Install R**:
+   Ensure [R 4.0+](https://cloud.r-project.org/) is installed.
+
+2. **Run the package installer and register IRkernel**:
+   ```bash
+   Rscript install_packages.R
+   ```
+   *This automatically installs `coda`, `loo`, `MASS`, `IRkernel`, and registers the kernel with Jupyter.*
+
+3. **Launch Jupyter**:
+   ```bash
+   jupyter lab
+   ```
+   Open `00_START_HERE.ipynb`, select the **`R`** kernel, and run the verification cell!
