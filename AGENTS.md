@@ -1,6 +1,6 @@
-# Antigravity / Jetski Agent Rules: Bayesian Inference Masterclass
+# Antigravity / Jetski Agent Rules: Bayesian Inference: A Practical Introduction
 
-This repository maintains **The Complete Bayesian Modeling Masterclass** in two parallel tracks with exact mathematical, structural, and narrative parity:
+This repository maintains **Bayesian Inference: A Practical Introduction** in two parallel tracks with exact mathematical, structural, and narrative parity:
 - **`r/`**: R implementation (Jupyter `ir` kernel, Base R, `optim`, `rethinking`, `coda`, `loo`, `MASS`).
 - **`python/`**: Python implementation (Jupyter `python3` kernel, `numpy`, `scipy.optimize`, `scipy.stats`, `matplotlib`, `pandas`).
 
@@ -36,7 +36,7 @@ All generated figures across both tracks must be immediately readable on high-re
 - **R**: Use `cex.lab=1.2`, `cex.main=1.3`, `lwd=2.5+`, and appropriate figure dimensions.
 
 ### 4. Git & GitHub Synchronization Protocol
-- **Remote**: `https://github.com/tarobins/bayesian-inference-masterclass.git` (`origin main`).
+- **Remote**: `https://github.com/tarobins/bayesian-inference-intro.git` (`origin main`).
 - **Git Binary**: `C:\Users\tarob\AppData\Local\Programs\git\cmd\git.exe`.
 - Whenever work is completed on a notebook or feature:
   1. Verify working tree status: `git status`

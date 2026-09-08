@@ -1,6 +1,6 @@
-# Bayesian Inference Masterclass: R Track 🔵
+# Bayesian Inference: A Practical Introduction: R Track 🔵
 
-Welcome to the **R Track** of the Bayesian Inference Masterclass! This track provides complete implementations of all foundational principles, numerical algorithms, diagnostics, dynamic filtering, and decision theory using **Base R**, `optim`, `rethinking` (Stan HMC), `coda`, and `loo`.
+Welcome to the **R Track** of the Bayesian Inference: A Practical Introduction! This track provides complete implementations of all foundational principles, numerical algorithms, diagnostics, dynamic filtering, and decision theory using **Base R**, `optim`, `rethinking` (Stan HMC), `coda`, and `loo`.
 
 ---
 

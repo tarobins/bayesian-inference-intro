@@ -1,10 +1,10 @@
-# The Complete Bayesian Modeling Masterclass
+# Bayesian Inference: A Practical Introduction
 ### *From Exact Conjugate Foundations to Production MCMC, Dynamic Reliability & Decision Theory*
 
-Welcome to the **Bayesian Modeling Masterclass**! This repository contains a complete, dual-track hands-on curriculum structured in an intuitive, progressive learning sequence:
+Welcome to the **Bayesian Inference: A Practical Introduction**! This repository contains a complete, dual-track hands-on curriculum structured in an intuitive, progressive learning sequence:
 from exact analytical foundations (Beta-Binomial conjugacy) $\to$ numerical approximation (Grid & Laplace) $\to$ production MCMC algorithms $\to$ dynamic filtering and risk-minimizing Bayesian decision theory.
 
-The masterclass is implemented in two parallel tracks with exact mathematical and structural parity:
+The curriculum is implemented in two parallel tracks with exact mathematical and structural parity:
 - 🔵 **[R Track (`r/`)](r/README.md)**: Built with Base R, `optim`, `rethinking` (Stan HMC engine), `coda`, and `loo`.
 - 🐍 **[Python Track (`python/`)](python/README.md)**: Built with `numpy`, `scipy.optimize`, `scipy.stats`, `matplotlib`, and `pandas`.
 
@@ -59,7 +59,7 @@ Use this reference matrix to select the right inferential paradigm for your prob
 ## 🧭 Repository Layout
 
 ```
-bayesian_inference_masterclass/
+bayesian_inference_intro/
 ├── README.md                                  <-- Master course syllabus & overview (You are here)
 ├── r/                                         <-- R Track (IRkernel)
 │   ├── README.md                              <-- R track setup & guide
@@ -106,5 +106,5 @@ Launch Jupyter from the parent directory:
 jupyter notebook --notebook-dir="C:\Users\tarob\scratch\jupyter_notebooks"
 ```
 
-1. Navigate to **`bayesian_inference_masterclass/`**.
+1. Navigate to **`bayesian_inference_intro/`**.
 2. Choose **`r/00_START_HERE.ipynb`** for the R experience, or **`python/00_START_HERE.ipynb`** for the Python experience.

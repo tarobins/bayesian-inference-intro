@@ -1,6 +1,6 @@
-# Bayesian Inference Masterclass: Python Track 🐍
+# Bayesian Inference: A Practical Introduction: Python Track 🐍
 
-Welcome to the **Python Track** of the Bayesian Inference Masterclass! This track provides complete implementations of all foundational principles, numerical algorithms, diagnostics, dynamic filtering, and decision theory using **NumPy**, **SciPy**, **Matplotlib**, and **Pandas**.
+Welcome to the **Python Track** of the Bayesian Inference: A Practical Introduction! This track provides complete implementations of all foundational principles, numerical algorithms, diagnostics, dynamic filtering, and decision theory using **NumPy**, **SciPy**, **Matplotlib**, and **Pandas**.
 
 ---
 
