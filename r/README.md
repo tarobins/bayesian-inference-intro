@@ -10,6 +10,7 @@ Welcome to the **R Track** of the Bayesian Inference curriculum! This track prov
 | :--- | :--- | :--- |
 | **00** | **[00_START_HERE.ipynb](00_START_HERE.ipynb)** | Syllabus, environment verification, Decision Guide & Rosetta Stone |
 | **01** | **[01_foundations_and_conjugate_updating.ipynb](01_foundations_and_conjugate_updating.ipynb)** | Exact Beta-Binomial conjugacy, Euler integral, Dutch books, Laplace Rule of Succession, online CI tracking |
+| **01b** | **[01b_normal_conjugate_updating.ipynb](01b_normal_conjugate_updating.ipynb)** | Continuous Normal conjugacy, precision, inverse-variance weighting, completing the square, sensor fusion |
 | **02** | **[02_frequentist_vs_grid_approximation.ipynb](02_frequentist_vs_grid_approximation.ipynb)** | Frequentist $t$-test vs. 2D Grid Approximation, prior shrinkage & sensitivity |
 | **03** | **[03_quadratic_laplace_approximation.ipynb](03_quadratic_laplace_approximation.ipynb)** | Fast prototyping with `optim(..., hessian=TRUE)`, `rethinking::quap`, multivariate normal draws |
 | **04** | **[04_mcmc_mechanics_from_scratch.ipynb](04_mcmc_mechanics_from_scratch.ipynb)** | Metropolis-Hastings from first principles, detailed balance, proposal step-size tuning |

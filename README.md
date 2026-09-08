@@ -10,11 +10,12 @@ The curriculum is implemented in two parallel tracks with exact mathematical and
 
 ---
 
-## 📚 Complete 7-Part Learning Progression
+## 📚 Complete 8-Part Learning Progression
 
 | Sheet | Topic | Core Questions & Key Concepts | R Tools (`r/`) | Python Tools (`python/`) |
 | :--- | :--- | :--- | :--- | :--- |
 | **[Sheet 1](r/01_foundations_and_conjugate_updating.ipynb)** | **Foundations: Beta Distribution & Conjugacy** | Euler integral, De Finetti theorem, Dutch books, Laplace Rule of Succession, online CI updating | `dbeta()`, `pbeta()`, `qbeta()` | [`scipy.stats.beta`](r/01_foundations_and_conjugate_updating.ipynb) (`pdf`, `cdf`, `ppf`, `sf`) |
+| **[Sheet 1b](r/01b_normal_conjugate_updating.ipynb)** | **Continuous Conjugacy: Normal Models & Weighting** | Inverse-variance weighting, completing the square proof, Gaussian tug-of-war, sensor fusion | `dnorm()`, analytical updates | [`scipy.stats.norm`](r/01b_normal_conjugate_updating.ipynb) (`pdf`, weighted mean/var) |
 | **[Sheet 2](r/02_frequentist_vs_grid_approximation.ipynb)** | **Beyond Conjugacy: Frequentist vs. Grid Approx** | Generative models, CI vs. Credible Intervals, 7 Deep Dives, Prior sensitivity & shrinkage | `t.test()`, `expand.grid()`, `dnorm()` | [`scipy.stats.ttest_1samp`](r/02_frequentist_vs_grid_approximation.ipynb), `np.meshgrid`, `stats.norm` |
 | **[Sheet 3](r/03_quadratic_laplace_approximation.ipynb)** | **Rapid Prototyping: Quadratic (Laplace) Approx** | Parabolic log-posteriors, inverting the Hessian matrix, Multivariate Normal draws | `optim(..., hessian=TRUE)`, `rethinking::quap()` | [`scipy.optimize.minimize`](r/03_quadratic_laplace_approximation.ipynb), `np.random.multivariate_normal` |
 | **[Sheet 4](r/04_mcmc_mechanics_from_scratch.ipynb)** | **First Principles: MCMC Mechanics from Scratch** | Detailed balance, 3-step Metropolis rule, step-size tuning failure modes, autocorrelation decay | Pure Base R (`rnorm()`, `runif()`, `acf()`) | [Pure NumPy / SciPy](r/04_mcmc_mechanics_from_scratch.ipynb) (`np.random.normal`, ACF, ESS) |
@@ -67,6 +68,7 @@ bayesian-inference-intro/
 │   ├── README.md                              <-- R track setup & guide
 │   ├── 00_START_HERE.ipynb                    <-- R Course syllabus & Decision Guide
 │   ├── 01_foundations_and_conjugate_updating.ipynb
+│   ├── 01b_normal_conjugate_updating.ipynb
 │   ├── 02_frequentist_vs_grid_approximation.ipynb
 │   ├── 03_quadratic_laplace_approximation.ipynb
 │   ├── 04_mcmc_mechanics_from_scratch.ipynb
@@ -77,6 +79,7 @@ bayesian-inference-intro/
     ├── README.md                              <-- Python track setup & guide
     ├── 00_START_HERE.ipynb                    <-- Python Course syllabus & Decision Guide
     ├── 01_foundations_and_conjugate_updating.ipynb
+    ├── 01b_normal_conjugate_updating.ipynb
     ├── 02_frequentist_vs_grid_approximation.ipynb
     ├── 03_quadratic_laplace_approximation.ipynb
     ├── 04_mcmc_mechanics_from_scratch.ipynb
