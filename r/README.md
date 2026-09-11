@@ -17,6 +17,7 @@ Welcome to the **R Track** of the Bayesian Inference curriculum! This track prov
 | **05** | **[05_mcmc_production_diagnostics.ipynb](05_mcmc_production_diagnostics.ipynb)** | Multi-chain sampling, Gelman-Rubin $\hat{R}$, Effective Sample Size ($ESS$), WAIC, and PSIS-LOO |
 | **06** | **[06_calibrating_bayesian_decay_and_memory.ipynb](06_calibrating_bayesian_decay_and_memory.ipynb)** | Dynamic non-stationary state filtering, exponential memory decay ($\gamma$), pre-quential backtesting |
 | **07** | **[07_bayesian_decision_theory_and_predictive_checks.ipynb](07_bayesian_decision_theory_and_predictive_checks.ipynb)** | Actionable systems, $L_2$ vs $L_1$ vs $L_0$ loss, asymmetric business cost cutoffs, Prior & Posterior Predictive Checks |
+| **Appendix** | **[appendix_understanding_the_hessian_matrix.ipynb](../python/appendix_understanding_the_hessian_matrix.ipynb)** | Visual primer on Hessian & Jacobian matrices, 3D bowl/dome/saddle geometry, Newton optimization, and Laplace precision duality ($\Sigma = H^{-1}$) |
 
 ---
 

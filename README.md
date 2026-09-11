@@ -23,6 +23,12 @@ The curriculum is implemented in two parallel tracks with exact mathematical and
 | **[Sheet 6](r/06_calibrating_bayesian_decay_and_memory.ipynb)** | **Dynamic Filtering: Calibrating Memory Decay ($\gamma$)** | Cauchy $O(1)$ streaming, Poisson hazard rate, West-Harrison state space, rolling window cliff-edge comparison, half-life, pre-quential backtesting | `qbeta()`, `log_beta_binom()` | [`scipy.special`](r/06_calibrating_bayesian_decay_and_memory.ipynb), dynamic discount filters |
 | **[Sheet 7](r/07_bayesian_decision_theory_and_predictive_checks.ipynb)** | **Actionable Systems: Decision Theory & Predictive Checks** | Expected loss minimization, $L_2$ (Mean) vs $L_1$ (Median) vs $L_0$ (MAP) proofs, asymmetric business cost cutoffs, Prior/Posterior Predictive Checks (PPC) | `rbeta()`, `pbeta()`, simulation checks | [`scipy.stats.beta`](r/07_bayesian_decision_theory_and_predictive_checks.ipynb), loss functions, PPC |
 
+### 📑 Course Appendices & Specialized Guides
+
+| Appendix | Topic | Core Focus & Key Concepts | Implementation |
+| :--- | :--- | :--- | :--- |
+| **[Appendix: The Hessian Matrix](python/appendix_understanding_the_hessian_matrix.ipynb)** | **Geometric & Mathematical Foundations of Curvature** | 1D vs 2D curvature, Bowl/Dome/Pringle analogies, Jacobian connection ($H = J(\nabla f)$), Newton-Raphson vs Gradient Descent, Laplace precision matrix ($\Sigma = H^{-1}$) | SymPy, NumPy, Matplotlib 3D |
+
 ---
 
 ## 🧭 Which Method When? Bayesian Method Decision Guide
@@ -85,7 +91,8 @@ bayesian-inference-intro/
     ├── 04_mcmc_mechanics_from_scratch.ipynb
     ├── 05_mcmc_production_diagnostics.ipynb
     ├── 06_calibrating_bayesian_decay_and_memory.ipynb
-    └── 07_bayesian_decision_theory_and_predictive_checks.ipynb
+    ├── 07_bayesian_decision_theory_and_predictive_checks.ipynb
+    └── appendix_understanding_the_hessian_matrix.ipynb
 ```
 
 ---
