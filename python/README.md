@@ -19,6 +19,7 @@ Welcome to the **Python Track** of the Bayesian Inference curriculum! This track
 | **07** | **[07_bayesian_decision_theory_and_predictive_checks.ipynb](07_bayesian_decision_theory_and_predictive_checks.ipynb)** | Actionable systems, $L_2$ vs $L_1$ vs $L_0$ loss, asymmetric business loss cutoffs, Prior & Posterior Predictive Checks |
 | **Appendix A** | **[appendix_understanding_the_hessian_matrix.ipynb](appendix_understanding_the_hessian_matrix.ipynb)** | Visual primer on Hessian & Jacobian matrices, 3D bowl/dome/saddle geometry, Newton optimization, and Laplace precision duality ($\Sigma = H^{-1}$) |
 | **Appendix B** | **[appendix_frequentist_vs_bayesian_tolerance_intervals.ipynb](appendix_frequentist_vs_bayesian_tolerance_intervals.ipynb)** | Frequentist vs. Bayesian predictive guarantees: Flaw of Averages, Student's $t$ Prediction Bounds, ISO Tolerance Limits, and Asymmetric Loss |
+| **Appendix C** | **[appendix_frequentist_vs_bayesian_flaky_tests.ipynb](appendix_frequentist_vs_bayesian_flaky_tests.ipynb)** | Verifying flaky test fixes: why 0/100 passes proves nothing, Fisher's Exact Test, Rule of Three, Wald's SPRT, Beta-Binomial Bayes Factors, and CI loss |
 
 ---
 
