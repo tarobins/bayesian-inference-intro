@@ -28,6 +28,7 @@ The curriculum is implemented in two parallel tracks with exact mathematical and
 | Appendix | Topic | Core Focus & Key Concepts | Implementation |
 | :--- | :--- | :--- | :--- |
 | **[Appendix: The Hessian Matrix](python/appendix_understanding_the_hessian_matrix.ipynb)** | **Geometric & Mathematical Foundations of Curvature** | 1D vs 2D curvature, Bowl/Dome/Pringle analogies, Jacobian connection ($H = J(\nabla f)$), Newton-Raphson vs Gradient Descent, Laplace precision matrix ($\Sigma = H^{-1}$) | SymPy, NumPy, Matplotlib 3D |
+| **[Appendix: Tolerance Intervals & Decision Sizing](python/appendix_frequentist_vs_bayesian_tolerance_intervals.ipynb)** | **Predictive Guarantees: Frequentist vs. Bayesian** | Flaw of Averages, Plug-In Fallacy, Student's $t$ Prediction Bounds, ISO 16269-6 Tolerance Limits (Non-Central $t$), Asymmetric Economic Loss | SciPy (`norm`, `t`, `nct`), NumPy |
 
 ---
 
@@ -92,7 +93,8 @@ bayesian-inference-intro/
     ├── 05_mcmc_production_diagnostics.ipynb
     ├── 06_calibrating_bayesian_decay_and_memory.ipynb
     ├── 07_bayesian_decision_theory_and_predictive_checks.ipynb
-    └── appendix_understanding_the_hessian_matrix.ipynb
+    ├── appendix_understanding_the_hessian_matrix.ipynb
+    └── appendix_frequentist_vs_bayesian_tolerance_intervals.ipynb
 ```
 
 ---
