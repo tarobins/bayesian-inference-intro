@@ -13,6 +13,7 @@ Welcome to the **R Track** of the Bayesian Inference curriculum! This track prov
 | **01b** | **[01b_normal_conjugate_updating.ipynb](01b_normal_conjugate_updating.ipynb)** | Continuous Normal conjugacy, precision, inverse-variance weighting, completing the square, sensor fusion |
 | **02** | **[02_frequentist_vs_grid_approximation.ipynb](02_frequentist_vs_grid_approximation.ipynb)** | Frequentist $t$-test vs. 2D Grid Approximation, prior shrinkage & sensitivity |
 | **03** | **[03_quadratic_laplace_approximation.ipynb](03_quadratic_laplace_approximation.ipynb)** | Fast prototyping with `optim(..., hessian=TRUE)`, `rethinking::quap`, multivariate normal draws |
+| **03b** | **[03b_markov_chains_and_detailed_balance.ipynb](03b_markov_chains_and_detailed_balance.ipynb)** | Foundations of Markov chains, transition matrix $P$, stationary distribution $\pi P = \pi$, probability flows, detailed balance proof, discrete Metropolis |
 | **04** | **[04_mcmc_mechanics_from_scratch.ipynb](04_mcmc_mechanics_from_scratch.ipynb)** | Metropolis-Hastings from first principles, detailed balance, proposal step-size tuning |
 | **05** | **[05_mcmc_production_diagnostics.ipynb](05_mcmc_production_diagnostics.ipynb)** | Multi-chain sampling, Gelman-Rubin $\hat{R}$, Effective Sample Size ($ESS$), WAIC, and PSIS-LOO |
 | **06** | **[06_calibrating_bayesian_decay_and_memory.ipynb](06_calibrating_bayesian_decay_and_memory.ipynb)** | Dynamic non-stationary state filtering, exponential memory decay ($\gamma$), pre-quential backtesting |

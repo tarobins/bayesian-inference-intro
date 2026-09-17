@@ -18,6 +18,7 @@ The curriculum is implemented in two parallel tracks with exact mathematical and
 | **[Sheet 1b](r/01b_normal_conjugate_updating.ipynb)** | **Continuous Conjugacy: Normal Models & Weighting** | Inverse-variance weighting, completing the square proof, Gaussian tug-of-war, sensor fusion | `dnorm()`, analytical updates | [`scipy.stats.norm`](r/01b_normal_conjugate_updating.ipynb) (`pdf`, weighted mean/var) |
 | **[Sheet 2](r/02_frequentist_vs_grid_approximation.ipynb)** | **Beyond Conjugacy: Frequentist vs. Grid Approx** | Generative models, CI vs. Credible Intervals, 7 Deep Dives, Prior sensitivity & shrinkage | `t.test()`, `expand.grid()`, `dnorm()` | [`scipy.stats.ttest_1samp`](r/02_frequentist_vs_grid_approximation.ipynb), `np.meshgrid`, `stats.norm` |
 | **[Sheet 3](r/03_quadratic_laplace_approximation.ipynb)** | **Rapid Prototyping: Quadratic (Laplace) Approx** | Parabolic log-posteriors, inverting the Hessian matrix, Multivariate Normal draws | `optim(..., hessian=TRUE)`, `rethinking::quap()` | [`scipy.optimize.minimize`](r/03_quadratic_laplace_approximation.ipynb), `np.random.multivariate_normal` |
+| **[Sheet 3b](r/03b_markov_chains_and_detailed_balance.ipynb)** | **Equilibrium Foundations: Markov Chains & Detailed Balance** | The Markov property, transition matrix $P$, stationary distribution $\pi P = \pi$, probability flows, detailed balance proof, discrete Metropolis | Matrix powers, `eigen()`, `solve()` | Matrix powers, `np.linalg.eig`, discrete Metropolis |
 | **[Sheet 4](r/04_mcmc_mechanics_from_scratch.ipynb)** | **First Principles: MCMC Mechanics from Scratch** | Detailed balance, 3-step Metropolis rule, step-size tuning failure modes, autocorrelation decay | Pure Base R (`rnorm()`, `runif()`, `acf()`) | [Pure NumPy / SciPy](r/04_mcmc_mechanics_from_scratch.ipynb) (`np.random.normal`, ACF, ESS) |
 | **[Sheet 5](r/05_mcmc_production_diagnostics.ipynb)** | **Production Scale: Multi-Chain MCMC & Diagnostics** | Multi-chain convergence, Gelman-Rubin $\hat{R}$, Effective Sample Size ($ESS$), HMC physics, PSIS-LOO model comparison | `coda`, `rethinking::ulam()`, `loo` | [Multi-chain runner](r/05_mcmc_production_diagnostics.ipynb), Gelman-Rubin $\hat{R}$, WAIC, PSIS-LOO |
 | **[Sheet 6](r/06_calibrating_bayesian_decay_and_memory.ipynb)** | **Dynamic Filtering: Calibrating Memory Decay ($\gamma$)** | Cauchy $O(1)$ streaming, Poisson hazard rate, West-Harrison state space, rolling window cliff-edge comparison, half-life, pre-quential backtesting | `qbeta()`, `log_beta_binom()` | [`scipy.special`](r/06_calibrating_bayesian_decay_and_memory.ipynb), dynamic discount filters |
@@ -79,6 +80,7 @@ bayesian-inference-intro/
 │   ├── 01b_normal_conjugate_updating.ipynb
 │   ├── 02_frequentist_vs_grid_approximation.ipynb
 │   ├── 03_quadratic_laplace_approximation.ipynb
+│   ├── 03b_markov_chains_and_detailed_balance.ipynb
 │   ├── 04_mcmc_mechanics_from_scratch.ipynb
 │   ├── 05_mcmc_production_diagnostics.ipynb
 │   ├── 06_calibrating_bayesian_decay_and_memory.ipynb
@@ -90,6 +92,7 @@ bayesian-inference-intro/
     ├── 01b_normal_conjugate_updating.ipynb
     ├── 02_frequentist_vs_grid_approximation.ipynb
     ├── 03_quadratic_laplace_approximation.ipynb
+    ├── 03b_markov_chains_and_detailed_balance.ipynb
     ├── 04_mcmc_mechanics_from_scratch.ipynb
     ├── 05_mcmc_production_diagnostics.ipynb
     ├── 06_calibrating_bayesian_decay_and_memory.ipynb
