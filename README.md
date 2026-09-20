@@ -4,7 +4,8 @@
 Welcome to the **Bayesian Inference: A Practical Introduction**! This repository contains a complete, dual-track hands-on curriculum structured in an intuitive, progressive learning sequence:
 from exact analytical foundations (Beta-Binomial conjugacy) $\to$ numerical approximation (Grid & Laplace) $\to$ production MCMC algorithms $\to$ dynamic filtering and risk-minimizing Bayesian decision theory.
 
-The curriculum is implemented in two parallel tracks with exact mathematical and structural parity:
+The curriculum is implemented in three parallel tracks to meet different learning styles:
+- 📖 **[Conceptual Track (`conceptual/`)](conceptual/README.md)**: A pure reading edition with minimal math notation, zero code, and intuitive physical mental models.
 - 🔵 **[R Track (`r/`)](r/README.md)**: Built with Base R, `optim`, `rethinking` (Stan HMC engine), `coda`, and `loo`.
 - 🐍 **[Python Track (`python/`)](python/README.md)**: Built with `numpy`, `scipy.optimize`, `scipy.stats`, `matplotlib`, and `pandas`.
 
@@ -74,6 +75,17 @@ bayesian-inference-intro/
 ├── README.md                                  <-- Master course syllabus & setup guide (You are here)
 ├── requirements.txt                           <-- Python dependencies & Jupyter packages
 ├── install_packages.R                         <-- R package installation & IRkernel registration script
+├── conceptual/                                <-- Conceptual Track (Plain English, Zero Code, Minimal Math)
+│   ├── README.md                              <-- Conceptual track guide & syllabus
+│   ├── 00_START_HERE.ipynb                    <-- The Big Picture & The Three Paradigms
+│   ├── 01_learning_from_evidence_and_conjugacy.ipynb
+│   ├── 02_the_frequentist_trap_and_grid_approximation.ipynb
+│   ├── 03_finding_the_peak_laplace_and_curvature.ipynb
+│   ├── 04_exploring_the_unknown_markov_chains_and_mcmc.ipynb
+│   ├── 05_production_physics_hamiltonian_monte_carlo_and_diagnostics.ipynb
+│   ├── 06_dynamic_world_bayesian_memory_and_decay.ipynb
+│   ├── 07_making_decisions_under_uncertainty.ipynb
+│   └── 08_case_studies_flaky_tests_and_pipeline_decisions.ipynb
 ├── r/                                         <-- R Track (IRkernel)
 │   ├── README.md                              <-- R track setup & guide
 │   ├── 00_START_HERE.ipynb                    <-- R Course syllabus & Decision Guide
@@ -100,7 +112,8 @@ bayesian-inference-intro/
     ├── 07_bayesian_decision_theory_and_predictive_checks.ipynb
     ├── appendix_understanding_the_hessian_matrix.ipynb
     ├── appendix_frequentist_vs_bayesian_tolerance_intervals.ipynb
-    └── appendix_frequentist_vs_bayesian_flaky_tests.ipynb
+    ├── appendix_frequentist_vs_bayesian_flaky_tests.ipynb
+    └── appendix_test_promotion_heuristics_vs_bayes.ipynb
 ```
 
 ---
