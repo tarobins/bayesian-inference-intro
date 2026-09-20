@@ -21,6 +21,7 @@ Welcome to the **R Track** of the Bayesian Inference curriculum! This track prov
 | **Appendix A** | **[appendix_understanding_the_hessian_matrix.ipynb](../python/appendix_understanding_the_hessian_matrix.ipynb)** | Visual primer on Hessian & Jacobian matrices, 3D bowl/dome/saddle geometry, Newton optimization, and Laplace precision duality ($\Sigma = H^{-1}$) |
 | **Appendix B** | **[appendix_frequentist_vs_bayesian_tolerance_intervals.ipynb](../python/appendix_frequentist_vs_bayesian_tolerance_intervals.ipynb)** | Frequentist vs. Bayesian predictive guarantees: Flaw of Averages, Student's $t$ Prediction Bounds, ISO Tolerance Limits, and Asymmetric Loss |
 | **Appendix C** | **[appendix_frequentist_vs_bayesian_flaky_tests.ipynb](../python/appendix_frequentist_vs_bayesian_flaky_tests.ipynb)** | Verifying flaky test fixes: why 0/100 passes proves nothing, Fisher's Exact Test, Rule of Three, Wald's SPRT, Beta-Binomial Bayes Factors, and CI loss |
+| **Appendix D** | **[appendix_test_promotion_heuristics_vs_bayes.ipynb](../python/appendix_test_promotion_heuristics_vs_bayes.ipynb)** | CI/CD test promotion: (N, M) passing streaks vs. Bayesian dynamic discount filtering and asymmetric loss |
 
 ---
 

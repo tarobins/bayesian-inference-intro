@@ -31,6 +31,7 @@ The curriculum is implemented in two parallel tracks with exact mathematical and
 | **[Appendix A: The Hessian Matrix](python/appendix_understanding_the_hessian_matrix.ipynb)** | **Geometric & Mathematical Foundations of Curvature** | 1D vs 2D curvature, Bowl/Dome/Pringle analogies, Jacobian connection ($H = J(\nabla f)$), Newton-Raphson vs Gradient Descent, Laplace precision matrix ($\Sigma = H^{-1}$) | SymPy, NumPy, Matplotlib 3D |
 | **[Appendix B: Tolerance Intervals & Decision Sizing](python/appendix_frequentist_vs_bayesian_tolerance_intervals.ipynb)** | **Predictive Guarantees: Frequentist vs. Bayesian** | Flaw of Averages, Plug-In Fallacy, Student's $t$ Prediction Bounds, ISO 16269-6 Tolerance Limits (Non-Central $t$), Asymmetric Economic Loss | SciPy (`norm`, `t`, `nct`), NumPy |
 | **[Appendix C: Verifying Flaky Test Fixes](python/appendix_frequentist_vs_bayesian_flaky_tests.ipynb)** | **Flaky Tests: Frequentist vs. Bayesian Approaches** | Why 0/100 Passes Proves Nothing, Fisher's Exact Test, Rule of Three, Wald's Sequential Test (SPRT), Beta-Binomial Bayes Factors, Asymmetric CI Loss | SciPy (`binom`, `fisher_exact`), NumPy, Matplotlib |
+| **[Appendix D: Test Promotion Heuristics vs. Bayes](python/appendix_test_promotion_heuristics_vs_bayes.ipynb)** | **CI/CD Test Promotion: (N, M) Streaks vs. Bayesian Filtering** | Deconstructing (N, M) passing streak heuristics, (1-p)^M geometric trap, survivorship bias, dynamic discount state machine, asymmetric promotion risk | SciPy (`beta`, `binom`), NumPy, Matplotlib |
 
 ---
 
