@@ -27,12 +27,12 @@ The curriculum is implemented in three parallel tracks to meet different learnin
 
 ### 📑 Course Appendices & Specialized Guides
 
-| Appendix | Topic | Core Focus & Key Concepts | Implementation |
+| Appendix | Topic | Core Focus & Key Concepts | Editions & Implementation |
 | :--- | :--- | :--- | :--- |
-| **[Appendix A: The Hessian Matrix](python/appendix_understanding_the_hessian_matrix.ipynb)** | **Geometric & Mathematical Foundations of Curvature** | 1D vs 2D curvature, Bowl/Dome/Pringle analogies, Jacobian connection ($H = J(\nabla f)$), Newton-Raphson vs Gradient Descent, Laplace precision matrix ($\Sigma = H^{-1}$) | SymPy, NumPy, Matplotlib 3D |
-| **[Appendix B: Tolerance Intervals & Decision Sizing](python/appendix_frequentist_vs_bayesian_tolerance_intervals.ipynb)** | **Predictive Guarantees: Frequentist vs. Bayesian** | Flaw of Averages, Plug-In Fallacy, Student's $t$ Prediction Bounds, ISO 16269-6 Tolerance Limits (Non-Central $t$), Asymmetric Economic Loss | SciPy (`norm`, `t`, `nct`), NumPy |
-| **[Appendix C: Verifying Flaky Test Fixes](python/appendix_frequentist_vs_bayesian_flaky_tests.ipynb)** | **Flaky Tests: Frequentist vs. Bayesian Approaches** | Why 0/100 Passes Proves Nothing, Fisher's Exact Test, Rule of Three, Wald's Sequential Test (SPRT), Beta-Binomial Bayes Factors, Asymmetric CI Loss | SciPy (`binom`, `fisher_exact`), NumPy, Matplotlib |
-| **[Appendix D: Test Promotion Heuristics vs. Bayes](python/appendix_test_promotion_heuristics_vs_bayes.ipynb)** | **CI/CD Test Promotion: (N, M) Streaks vs. Bayesian Filtering** | Deconstructing (N, M) passing streak heuristics, (1-p)^M geometric trap, survivorship bias, dynamic discount state machine, asymmetric promotion risk | SciPy (`beta`, `binom`), NumPy, Matplotlib |
+| **Appendix A: The Hessian Matrix** | **Geometric & Mathematical Foundations of Curvature** | 1D vs 2D curvature, Bowl/Dome/Pringle analogies, Jacobian connection ($H = J(\nabla f)$), Newton-Raphson vs Gradient Descent, Laplace precision matrix ($\Sigma = H^{-1}$) | 📖 [Conceptual](conceptual/appendix_a_understanding_the_hessian_matrix.ipynb) \| 🐍 [Python](python/appendix_understanding_the_hessian_matrix.ipynb) |
+| **Appendix B: Tolerance Intervals & Decision Sizing** | **Predictive Guarantees: Frequentist vs. Bayesian** | Flaw of Averages, Plug-In Fallacy, Student's $t$ Prediction Bounds, ISO 16269-6 Tolerance Limits (Non-Central $t$), Asymmetric Economic Loss | 📖 [Conceptual](conceptual/appendix_b_tolerance_intervals_and_decision_sizing.ipynb) \| 🐍 [Python](python/appendix_frequentist_vs_bayesian_tolerance_intervals.ipynb) |
+| **Appendix C: Verifying Flaky Test Fixes** | **Flaky Tests: Frequentist vs. Bayesian Approaches** | Why 0/100 Passes Proves Nothing, Fisher's Exact Test, Rule of Three, Wald's Sequential Test (SPRT), Beta-Binomial Bayes Factors, Asymmetric CI Loss | 📖 [Conceptual](conceptual/appendix_c_verifying_flaky_test_fixes.ipynb) \| 🐍 [Python](python/appendix_frequentist_vs_bayesian_flaky_tests.ipynb) |
+| **Appendix D: Test Promotion Heuristics vs. Bayes** | **CI/CD Test Promotion: (N, M) Streaks vs. Bayesian Filtering** | Deconstructing (N, M) passing streak heuristics, (1-p)^M geometric trap, survivorship bias, dynamic discount state machine, asymmetric promotion risk | 📖 [Conceptual](conceptual/appendix_d_test_promotion_heuristics_vs_bayes.ipynb) \| 🐍 [Python](python/appendix_test_promotion_heuristics_vs_bayes.ipynb) |
 
 ---
 
@@ -85,7 +85,11 @@ bayesian-inference-intro/
 │   ├── 05_production_physics_hamiltonian_monte_carlo_and_diagnostics.ipynb
 │   ├── 06_dynamic_world_bayesian_memory_and_decay.ipynb
 │   ├── 07_making_decisions_under_uncertainty.ipynb
-│   └── 08_case_studies_flaky_tests_and_pipeline_decisions.ipynb
+│   ├── 08_case_studies_flaky_tests_and_pipeline_decisions.ipynb
+│   ├── appendix_a_understanding_the_hessian_matrix.ipynb
+│   ├── appendix_b_tolerance_intervals_and_decision_sizing.ipynb
+│   ├── appendix_c_verifying_flaky_test_fixes.ipynb
+│   └── appendix_d_test_promotion_heuristics_vs_bayes.ipynb
 ├── r/                                         <-- R Track (IRkernel)
 │   ├── README.md                              <-- R track setup & guide
 │   ├── 00_START_HERE.ipynb                    <-- R Course syllabus & Decision Guide

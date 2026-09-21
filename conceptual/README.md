@@ -28,6 +28,15 @@ This edition takes the exact opposite approach:
 
 ---
 
+## 📑 Dedicated Conceptual Appendices
+
+| Appendix | Title | Core Question | Key Physical Intuition |
+| :--- | :--- | :--- | :--- |
+| **[Appendix A](appendix_a_understanding_the_hessian_matrix.ipynb)** | **Geometric & Physical Intuitions of the Hessian Matrix** | What is curvature in multi-dimensional space, and why does inverting it give uncertainty? | The Salad Bowl, The Igloo Dome, and The Pringle Chip (saddle point); feeling the ground with your boots; Newton-Raphson vs. Gradient Descent. |
+| **[Appendix B](appendix_b_tolerance_intervals_and_decision_sizing.ipynb)** | **Tolerance Intervals & Decision Sizing** | How do we guarantee performance for 99% of future users under real parameter uncertainty? | The Administrative Trap (Flaw of Averages); Confidence vs Prediction vs Tolerance intervals; The Plug-in Fallacy; Bayesian simulation superpower. |
+| **[Appendix C](appendix_c_verifying_flaky_test_fixes.ipynb)** | **Verifying Flaky Test Fixes** | Why does 0/100 passes prove almost nothing, and how do we verify fixes without wasting compute? | The 50-sided die; the sugar pill trial (Fisher's exact test); Rule of Three ($3/N$); Wald's SPRT (speed camera); the courtroom shoe print; the hydraulic shake table. |
+| **[Appendix D](appendix_d_test_promotion_heuristics_vs_bayes.ipynb)** | **CI/CD Test Promotion: Streaks vs. Bayes** | When should a quarantined test be promoted to a blocking quality gate? | The geometric streak trap (~60% false promotion rate); survivorship bias; structural amnesia; dynamic Bayesian discount state machine. |
+
 ## 🧭 How This Fits with the Rest of the Course
 
 This repository offers three complementary ways to learn Bayesian inference:
