@@ -1,98 +1,91 @@
 # Bayesian Inference: A Practical Introduction
 ### *From Exact Conjugate Foundations to Production MCMC, Dynamic Reliability & Decision Theory*
 
-Welcome to the **Bayesian Inference: A Practical Introduction**! This repository contains a complete, dual-track hands-on curriculum structured in an intuitive, progressive learning sequence:
+Welcome to **Bayesian Inference: A Practical Introduction**! This repository contains a complete, production-grade hands-on curriculum structured in an intuitive, progressive learning sequence:
 from exact analytical foundations (Beta-Binomial conjugacy) $\to$ numerical approximation (Grid & Laplace) $\to$ production MCMC algorithms $\to$ dynamic filtering and risk-minimizing Bayesian decision theory.
 
-The curriculum is implemented in three parallel tracks to meet different learning styles:
-- 📖 **[Conceptual Track (`conceptual/`)](conceptual/README.md)**: A pure reading edition with minimal math notation, zero code, and intuitive physical mental models.
-- 🔵 **[R Track (`r/`)](r/README.md)**: Built with Base R, `optim`, `rethinking` (Stan HMC engine), `coda`, and `loo`.
+---
+
+## 💡 The Unified 3-Layer Pedagogical Architecture
+
+To provide maximum pedagogical clarity without compromising mathematical or algorithmic rigor, every topic is delivered through an integrated **3-layer structure**:
+
+1. **🧠 Collapsible Deep Intuitions (`<details>`)**: Physical mental models, everyday analogies, and failure modes (The Balance Scale of Pebbles, The Gaussian Tug-of-War, The 100 Parallel Universes, The Pizza Slice Denominator, The Mountain in the Fog, The Frictionless Skate Park, The 30-Day Cliff vs. Fading Ink, The Drowned Statistician, and The Smoke Alarm Matrix). Learners wanting pure intuition can expand these on demand.
+2. **📐 First-Principles Mathematics**: Uncollapsed, step-by-step rigorous derivations (Euler integrals, De Finetti exchangeability, Taylor expansions of log-posteriors, Hessian curvature inversion $\Sigma = H^{-1}$, detailed balance proofs, and Wald decision criteria) that flow naturally from the section introductions.
+3. **💻 Production-Grade Executable Code**: Clean, vectorized implementations from scratch and with battle-tested libraries (`scipy.optimize`, `scipy.stats`, `ulam`/Stan), accompanied by production diagnostics and interactive decision dashboards.
+
+The curriculum is implemented in two parallel computational tracks:
 - 🐍 **[Python Track (`python/`)](python/README.md)**: Built with `numpy`, `scipy.optimize`, `scipy.stats`, `matplotlib`, and `pandas`.
+- 🔵 **[R Track (`r/`)](r/README.md)**: Built with Base R, `optim`, `rethinking` (Stan HMC engine), `coda`, and `loo`.
 
 ---
 
 ## 📚 Complete 8-Part Learning Progression
 
-| Sheet | Topic | Core Questions & Key Concepts | R Tools (`r/`) | Python Tools (`python/`) |
+| Sheet | Topic | Core Questions & Key Concepts | Python Tools (`python/`) | R Tools (`r/`) |
 | :--- | :--- | :--- | :--- | :--- |
-| **[Sheet 1](r/01_foundations_and_conjugate_updating.ipynb)** | **Foundations: Beta Distribution & Conjugacy** | Euler integral, De Finetti theorem, Dutch books, Laplace Rule of Succession, online CI updating | `dbeta()`, `pbeta()`, `qbeta()` | [`scipy.stats.beta`](r/01_foundations_and_conjugate_updating.ipynb) (`pdf`, `cdf`, `ppf`, `sf`) |
-| **[Sheet 1b](r/01b_normal_conjugate_updating.ipynb)** | **Continuous Conjugacy: Normal Models & Weighting** | Inverse-variance weighting, completing the square proof, Gaussian tug-of-war, sensor fusion | `dnorm()`, analytical updates | [`scipy.stats.norm`](r/01b_normal_conjugate_updating.ipynb) (`pdf`, weighted mean/var) |
-| **[Sheet 2](r/02_frequentist_vs_grid_approximation.ipynb)** | **Beyond Conjugacy: Frequentist vs. Grid Approx** | Generative models, CI vs. Credible Intervals, 7 Deep Dives, Prior sensitivity & shrinkage | `t.test()`, `expand.grid()`, `dnorm()` | [`scipy.stats.ttest_1samp`](r/02_frequentist_vs_grid_approximation.ipynb), `np.meshgrid`, `stats.norm` |
-| **[Sheet 3](r/03_quadratic_laplace_approximation.ipynb)** | **Rapid Prototyping: Quadratic (Laplace) Approx** | Parabolic log-posteriors, inverting the Hessian matrix, Multivariate Normal draws | `optim(..., hessian=TRUE)`, `rethinking::quap()` | [`scipy.optimize.minimize`](r/03_quadratic_laplace_approximation.ipynb), `np.random.multivariate_normal` |
-| **[Sheet 3b](r/03b_markov_chains_and_detailed_balance.ipynb)** | **Equilibrium Foundations: Markov Chains & Detailed Balance** | The Markov property, transition matrix $P$, stationary distribution $\pi P = \pi$, probability flows, detailed balance proof, discrete Metropolis | Matrix powers, `eigen()`, `solve()` | Matrix powers, `np.linalg.eig`, discrete Metropolis |
-| **[Sheet 4](r/04_mcmc_mechanics_from_scratch.ipynb)** | **First Principles: MCMC Mechanics from Scratch** | Detailed balance, 3-step Metropolis rule, step-size tuning failure modes, autocorrelation decay | Pure Base R (`rnorm()`, `runif()`, `acf()`) | [Pure NumPy / SciPy](r/04_mcmc_mechanics_from_scratch.ipynb) (`np.random.normal`, ACF, ESS) |
-| **[Sheet 5](r/05_mcmc_production_diagnostics.ipynb)** | **Production Scale: Multi-Chain MCMC & Diagnostics** | Multi-chain convergence, Gelman-Rubin $\hat{R}$, Effective Sample Size ($ESS$), HMC physics, PSIS-LOO model comparison | `coda`, `rethinking::ulam()`, `loo` | [Multi-chain runner](r/05_mcmc_production_diagnostics.ipynb), Gelman-Rubin $\hat{R}$, WAIC, PSIS-LOO |
-| **[Sheet 6](r/06_calibrating_bayesian_decay_and_memory.ipynb)** | **Dynamic Filtering: Calibrating Memory Decay ($\gamma$)** | Cauchy $O(1)$ streaming, Poisson hazard rate, West-Harrison state space, rolling window cliff-edge comparison, half-life, pre-quential backtesting | `qbeta()`, `log_beta_binom()` | [`scipy.special`](r/06_calibrating_bayesian_decay_and_memory.ipynb), dynamic discount filters |
-| **[Sheet 7](r/07_bayesian_decision_theory_and_predictive_checks.ipynb)** | **Actionable Systems: Decision Theory & Predictive Checks** | Expected loss minimization, $L_2$ (Mean) vs $L_1$ (Median) vs $L_0$ (MAP) proofs, asymmetric business cost cutoffs, Prior/Posterior Predictive Checks (PPC) | `rbeta()`, `pbeta()`, simulation checks | [`scipy.stats.beta`](r/07_bayesian_decision_theory_and_predictive_checks.ipynb), loss functions, PPC |
-
-### 📑 Course Appendices & Specialized Guides
-
-| Appendix | Topic | Core Focus & Key Concepts | Editions & Implementation |
-| :--- | :--- | :--- | :--- |
-| **Appendix A: The Hessian Matrix** | **Geometric & Mathematical Foundations of Curvature** | 1D vs 2D curvature, Bowl/Dome/Pringle analogies, Jacobian connection ($H = J(\nabla f)$), Newton-Raphson vs Gradient Descent, Laplace precision matrix ($\Sigma = H^{-1}$) | 📖 [Conceptual](conceptual/appendix_a_understanding_the_hessian_matrix.ipynb) \| 🐍 [Python](python/appendix_understanding_the_hessian_matrix.ipynb) |
-| **Appendix B: Tolerance Intervals & Decision Sizing** | **Predictive Guarantees: Frequentist vs. Bayesian** | Flaw of Averages, Plug-In Fallacy, Student's $t$ Prediction Bounds, ISO 16269-6 Tolerance Limits (Non-Central $t$), Asymmetric Economic Loss | 📖 [Conceptual](conceptual/appendix_b_tolerance_intervals_and_decision_sizing.ipynb) \| 🐍 [Python](python/appendix_frequentist_vs_bayesian_tolerance_intervals.ipynb) |
-| **Appendix C: Verifying Flaky Test Fixes** | **Flaky Tests: Frequentist vs. Bayesian Approaches** | Why 0/100 Passes Proves Nothing, Fisher's Exact Test, Rule of Three, Wald's Sequential Test (SPRT), Beta-Binomial Bayes Factors, Asymmetric CI Loss | 📖 [Conceptual](conceptual/appendix_c_verifying_flaky_test_fixes.ipynb) \| 🐍 [Python](python/appendix_frequentist_vs_bayesian_flaky_tests.ipynb) |
-| **Appendix D: Test Promotion Heuristics vs. Bayes** | **CI/CD Test Promotion: (N, M) Streaks vs. Bayesian Filtering** | Deconstructing (N, M) passing streak heuristics, (1-p)^M geometric trap, survivorship bias, dynamic discount state machine, asymmetric promotion risk | 📖 [Conceptual](conceptual/appendix_d_test_promotion_heuristics_vs_bayes.ipynb) \| 🐍 [Python](python/appendix_test_promotion_heuristics_vs_bayes.ipynb) |
+| **[Sheet 1](python/01_foundations_and_conjugate_updating.ipynb)** | **Foundations: Beta Distribution & Conjugacy** | Euler integral, De Finetti theorem, Dutch books, Laplace Rule of Succession, online CI updating | [`scipy.stats.beta`](python/01_foundations_and_conjugate_updating.ipynb) (`pdf`, `cdf`, `ppf`, `sf`) | `dbeta()`, `pbeta()`, `qbeta()` |
+| **[Sheet 1b](python/01b_normal_conjugate_updating.ipynb)** | **Continuous Conjugacy: Normal Models & Weighting** | Inverse-variance weighting, completing the square proof, Gaussian tug-of-war, sensor fusion | [`scipy.stats.norm`](python/01b_normal_conjugate_updating.ipynb) (`pdf`, weighted mean/var) | `dnorm()`, analytical updates |
+| **[Sheet 2](python/02_frequentist_vs_grid_approximation.ipynb)** | **Beyond Conjugacy: Frequentist vs. Grid Approx** | Generative models, CI vs. Credible Intervals, 7 Deep Dives, Prior sensitivity & shrinkage | [`scipy.stats.ttest_1samp`](python/02_frequentist_vs_grid_approximation.ipynb), `np.meshgrid`, `stats.norm` | `t.test()`, `expand.grid()`, `dnorm()` |
+| **[Sheet 3](python/03_quadratic_laplace_approximation.ipynb)** | **Rapid Prototyping: Quadratic (Laplace) Approx** | Parabolic log-posteriors, inverting the Hessian matrix, Multivariate Normal draws | [`scipy.optimize.minimize`](python/03_quadratic_laplace_approximation.ipynb), `np.random.multivariate_normal` | `optim(..., hessian=TRUE)`, `rethinking::quap()` |
+| **[Sheet 3b](python/03b_markov_chains_and_detailed_balance.ipynb)** | **Equilibrium Foundations: Markov Chains & Detailed Balance** | The Markov property, transition matrix $P$, stationary distribution $\pi P = \pi$, probability flows, detailed balance proof, discrete Metropolis | Matrix powers, `np.linalg.eig`, discrete Metropolis | Matrix powers, `eigen()`, `solve()` |
+| **[Sheet 4](python/04_mcmc_mechanics_from_scratch.ipynb)** | **MCMC Mechanics: Metropolis-Hastings from Scratch** | Acceptance ratio $r$, log-posterior target, step-size tuning ($\tau$), autocorrelation decay, ESS | Vectorized MCMC loops, `scipy.signal.correlate` | MCMC loops, `acf()` |
+| **[Sheet 5](python/05_mcmc_production_diagnostics.ipynb)** | **Production MCMC: Multi-Chain Diagnostics & HMC** | Multi-chain sampling, Gelman-Rubin $\hat{R}$, ESS, HMC physics, divergences, WAIC & PSIS-LOO | Multi-chain sampler, `az.plot_trace` / custom plots | `rethinking::ulam()`, `coda::gelman.diag()` |
+| **[Sheet 6](python/06_calibrating_bayesian_decay_and_memory.ipynb)** | **Dynamic Filtering: Calibrating Memory Decay ($\gamma$)** | Asymptotic blindness, exponential memory decay, half-life rule ($t_{1/2}$), $N_{\text{eff}}$, pre-quential backtesting | Exponential weighting loops, scoring rules | Dynamic update loops, calibration plots |
+| **[Sheet 7](python/07_bayesian_decision_theory_and_predictive_checks.ipynb)** | **Actionable Systems: Decision Theory & Validation** | Expected loss minimization, $L_2/L_1/0-1$ loss, asymmetric cost matrices, Prior & Posterior Predictive Checks | Numerical expected loss, PPC simulation | Expected loss optimization, PPC simulations |
 
 ---
 
-## 🧭 Which Method When? Bayesian Method Decision Guide
+## 📑 Special Topic Appendices
 
-Use this reference matrix to select the right inferential paradigm for your problem:
+| Appendix | Notebook | Core Focus & Techniques |
+| :--- | :--- | :--- |
+| **Appendix A** | **[appendix_understanding_the_hessian_matrix.ipynb](python/appendix_understanding_the_hessian_matrix.ipynb)** | Visual primer on Hessian & Jacobian matrices, 3D bowl/dome/saddle geometry, Newton optimization, and Laplace precision duality ($\Sigma = H^{-1}$) |
+| **Appendix B** | **[appendix_frequentist_vs_bayesian_tolerance_intervals.ipynb](python/appendix_frequentist_vs_bayesian_tolerance_intervals.ipynb)** | Frequentist vs. Bayesian predictive guarantees: Flaw of Averages, Student's $t$ Prediction Bounds, ISO Tolerance Limits, and Asymmetric Loss |
+| **Appendix C** | **[appendix_frequentist_vs_bayesian_flaky_tests.ipynb](python/appendix_frequentist_vs_bayesian_flaky_tests.ipynb)** | Verifying flaky test fixes: why 0/100 passes proves nothing, Fisher's Exact Test, Rule of Three, Wald's SPRT, Beta-Binomial Bayes Factors, and CI loss |
+| **Appendix D** | **[appendix_test_promotion_heuristics_vs_bayes.ipynb](python/appendix_test_promotion_heuristics_vs_bayes.ipynb)** | CI/CD test promotion: $(N, M)$ passing streaks vs. Bayesian dynamic discount filtering and asymmetric loss |
 
-| Paradigm | Primary Use Case | Parameter Dimension ($D$) | Exactness & Computation | Key Limitation / Failure Mode |
+---
+
+## 🧭 Computational Strategy Decision Matrix
+
+| Method | When to Choose | Scale Limits ($D$ Parameters) | Speed / Complexity | Primary Trade-Off / Failure Mode |
 | :--- | :--- | :--- | :--- | :--- |
-| **Exact Conjugacy** (Sheet 1) | Binomial, Poisson, Normal with standard conjugate priors | $D = 1 \dots 2$ | **Exact closed-form** ($O(1)$ updates) | Restricted to textbook likelihood-prior pairs |
-| **Grid Approximation** (Sheet 2) | Custom/arbitrary priors and likelihoods | $D \le 3$ max | Exact up to grid discretization resolution | **Curse of dimensionality**: $K^D$ explodes exponentially |
-| **Quadratic / Laplace (QUAP)** (Sheet 3) | Fast prototyping, unimodal posterior, large $N$ | $D \approx 1 \dots 50$ | Parabolic Gaussian Taylor expansion around mode | Inaccurate on skewed, bounded, or multimodal targets |
-| **Metropolis-Hastings MCMC** (Sheet 4) | Exploring general posteriors from first principles | $D \approx 1 \dots 10$ | Asymptotically exact as $S \to \infty$ | Slow random-walk diffusion, high autocorrelation |
-| **Hamiltonian Monte Carlo / NUTS** (Sheet 5) | High-dimensional models, hierarchical priors | $D \approx 10 \dots 10,000+$ | Asymptotically exact (gradient-directed physics) | Requires differentiable log-posterior, heavy compute |
-| **Dynamic Discount Filter** (Sheet 6) | Streaming, time-varying non-stationary data | $D = 1 \dots 3$ | **Exact recursive discount** ($O(1)$ streaming) | Memory decay parameter $\gamma$ must be calibrated |
+| **Exact Conjugacy** (Sheets 1, 1b) | Standard data likelihoods matching known prior families | $D = 1 \dots 2$ | **Instantaneous** ($\mathcal{O}(1)$ closed form) | Rigid modeling assumptions; cannot handle custom multi-parameter priors |
+| **Grid Approximation** (Sheet 2) | Pedagogical exploration, arbitrary priors/likelihoods | $D \le 3$ | **Exponential** ($\mathcal{O}(G^D)$) | **Curse of Dimensionality**: completely uncomputable for $D > 3$ |
+| **Quadratic / Laplace** (Sheet 3) | Fast prototyping, symmetric unimodal posteriors | $D \le 100$ | **Near-Instantaneous** ($\mathcal{O}(D^3)$ Hessian) | Blind to multimodality, asymmetric tails, and bounded parameter boundaries |
+| **Markov Chain Monte Carlo** (Sheets 4, 5) | Complex real-world models, non-linear hierarchical systems | $D = 10 \dots 10^5$ | **Moderate to Heavy** (Iterative simulation) | Requires convergence diagnostics ($\hat{R} < 1.01$, $ESS$, zero divergences) |
+| **Dynamic Discount Filter** (Sheet 6) | Streaming, time-varying non-stationary data | $D = 1 \dots 3$ | **Exact recursive discount** ($\mathcal{O}(1)$ streaming) | Memory decay parameter $\gamma$ must be calibrated |
 | **Decision Theory & PPC** (Sheet 7) | Translating posteriors to production decisions & sanity checking | Universal ($D \ge 1$) | Exact expected loss minimization & generative sampling | Requires defining real-world cost/loss matrix |
 
 ---
 
 ## 📖 Mathematical Notation & Function Rosetta Stone
 
-| Concept | Mathematical Symbol | R Implementation | Python Implementation | Operational Meaning |
+| Concept | Mathematical Symbol | Python Implementation | R Implementation | Operational Meaning |
 | :--- | :--- | :--- | :--- | :--- |
-| **Prior Probability** | $p(\theta)$ | `dbeta(x, a, b)`, `dnorm` | `scipy.stats.beta(a, b).pdf` | Belief state before observing evidence |
-| **Data Likelihood** | $\mathcal{L}(\theta \mid D) = p(D \mid \theta)$ | `dbinom(k, n, p)`, `dnorm` | `scipy.stats.binom.pmf(k, n, p)` | Probability of observed data given $\theta$ |
-| **Posterior Distribution** | $p(\theta \mid D)$ | Normalized vector / MCMC draws | Normalized array / MCMC draws | Updated belief state incorporating data |
-| **Credible Interval** | $[\theta_{\alpha/2}, \theta_{1-\alpha/2}]$ | `qbeta(c(0.05, 0.95), a, b)` | `scipy.stats.beta.ppf([0.05, 0.95], a, b)` | Interval containing parameter with probability $1-\alpha$ |
-| **Tail Risk / Exceedance** | $P(\theta > \theta_{\text{crit}} \mid D)$ | `1 - pbeta(crit, a, b)` | `scipy.stats.beta.sf(crit, a, b)` | Probability that parameter breaches critical limit |
-| **Gelman-Rubin Metric** | $\hat{R}$ | `coda::gelman.diag()` | Between-chain / within-chain variance ratio | MCMC convergence diagnosis (Target $\hat{R} < 1.01$) |
-| **Effective Sample Size** | $ESS$ | `coda::effectiveSize()` | `N / (1 + 2 * sum(acf))` | Number of independent MCMC pseudo-draws |
-| **Posterior Expected Loss** | $\mathbb{E}[L(a, \theta) \mid D]$ | `mean(sapply(draws, L))` | `np.mean(loss_fn(a, draws))` | Expected real-world penalty of action $a$ |
-| **Posterior Predictive $p$-value** | $\text{ppp} = P(T(y^{\text{rep}}) \ge T(y^{\text{obs}}))$ | `mean(t_rep >= t_obs)` | `np.mean(t_rep >= t_obs)` | Generative model calibration check |
+| **Prior Probability** | $p(\theta)$ | `scipy.stats.beta(a, b).pdf` | `dbeta(x, a, b)`, `dnorm` | Belief state before observing evidence |
+| **Data Likelihood** | $\mathcal{L}(\theta \mid D) = p(D \mid \theta)$ | `scipy.stats.binom.pmf(k, n, p)` | `dbinom(k, n, p)`, `dnorm` | Probability of observed data given $\theta$ |
+| **Posterior Distribution** | $p(\theta \mid D)$ | Normalized array / MCMC draws | Normalized vector / MCMC draws | Updated belief state incorporating data |
+| **Credible Interval** | $[\theta_{\alpha/2}, \theta_{1-\alpha/2}]$ | `scipy.stats.beta.ppf([0.05, 0.95], a, b)` | `qbeta(c(0.05, 0.95), a, b)` | Interval containing parameter with probability $1-\alpha$ |
+| **Tail Risk / Exceedance** | $P(\theta > \theta_{\text{crit}} \mid D)$ | `scipy.stats.beta.sf(crit, a, b)` | `1 - pbeta(crit, a, b)` | Probability that parameter breaches critical limit |
+| **Gelman-Rubin Metric** | $\hat{R}$ | Between-chain / within-chain variance ratio | `coda::gelman.diag()` | MCMC convergence diagnosis (Target $\hat{R} < 1.01$) |
+| **Effective Sample Size** | $ESS$ | `N / (1 + 2 * sum(acf))` | `coda::effectiveSize()` | Number of independent MCMC pseudo-draws |
+| **Posterior Expected Loss** | $\mathbb{E}[L(a, \theta) \mid D]$ | `np.mean(loss_fn(a, draws))` | `mean(sapply(draws, L))` | Expected real-world penalty of action $a$ |
+| **Posterior Predictive $p$-value** | $\text{ppp} = P(T(y^{\text{rep}}) \ge T(y^{\text{obs}}))$ | `np.mean(t_rep >= t_obs)` | `mean(t_rep >= t_obs)` | Generative model calibration check |
 
 ---
 
 ## 🧭 Repository Layout
 
-```
+```text
 bayesian-inference-intro/
 ├── README.md                                  <-- Master course syllabus & setup guide (You are here)
 ├── requirements.txt                           <-- Python dependencies & Jupyter packages
 ├── install_packages.R                         <-- R package installation & IRkernel registration script
-├── conceptual/                                <-- Conceptual Track (Plain English, Zero Code, Minimal Math)
-│   ├── README.md                              <-- Conceptual track guide & syllabus
-│   ├── 00_START_HERE.ipynb                    <-- The Big Picture & The Three Paradigms
-│   ├── 01_learning_from_evidence_and_conjugacy.ipynb
-│   ├── 02_the_frequentist_trap_and_grid_approximation.ipynb
-│   ├── 03_finding_the_peak_laplace_and_curvature.ipynb
-│   ├── 04_exploring_the_unknown_markov_chains_and_mcmc.ipynb
-│   ├── 05_production_physics_hamiltonian_monte_carlo_and_diagnostics.ipynb
-│   ├── 06_dynamic_world_bayesian_memory_and_decay.ipynb
-│   ├── 07_making_decisions_under_uncertainty.ipynb
-│   ├── 08_case_studies_flaky_tests_and_pipeline_decisions.ipynb
-│   ├── appendix_a_understanding_the_hessian_matrix.ipynb
-│   ├── appendix_b_tolerance_intervals_and_decision_sizing.ipynb
-│   ├── appendix_c_verifying_flaky_test_fixes.ipynb
-│   └── appendix_d_test_promotion_heuristics_vs_bayes.ipynb
-├── r/                                         <-- R Track (IRkernel)
-│   ├── README.md                              <-- R track setup & guide
-│   ├── 00_START_HERE.ipynb                    <-- R Course syllabus & Decision Guide
+├── python/                                    <-- Python Track (Python 3 kernel)
+│   ├── README.md                              <-- Python track setup & guide
+│   ├── 00_START_HERE.ipynb                    <-- Python Course syllabus & Decision Guide
 │   ├── 01_foundations_and_conjugate_updating.ipynb
 │   ├── 01b_normal_conjugate_updating.ipynb
 │   ├── 02_frequentist_vs_grid_approximation.ipynb
@@ -101,10 +94,14 @@ bayesian-inference-intro/
 │   ├── 04_mcmc_mechanics_from_scratch.ipynb
 │   ├── 05_mcmc_production_diagnostics.ipynb
 │   ├── 06_calibrating_bayesian_decay_and_memory.ipynb
-│   └── 07_bayesian_decision_theory_and_predictive_checks.ipynb
-└── python/                                    <-- Python Track (Python 3 kernel)
-    ├── README.md                              <-- Python track setup & guide
-    ├── 00_START_HERE.ipynb                    <-- Python Course syllabus & Decision Guide
+│   ├── 07_bayesian_decision_theory_and_predictive_checks.ipynb
+│   ├── appendix_understanding_the_hessian_matrix.ipynb
+│   ├── appendix_frequentist_vs_bayesian_tolerance_intervals.ipynb
+│   ├── appendix_frequentist_vs_bayesian_flaky_tests.ipynb
+│   └── appendix_test_promotion_heuristics_vs_bayes.ipynb
+└── r/                                         <-- R Track (IRkernel)
+    ├── README.md                              <-- R track setup & guide
+    ├── 00_START_HERE.ipynb                    <-- R Course syllabus & Decision Guide
     ├── 01_foundations_and_conjugate_updating.ipynb
     ├── 01b_normal_conjugate_updating.ipynb
     ├── 02_frequentist_vs_grid_approximation.ipynb
@@ -113,16 +110,12 @@ bayesian-inference-intro/
     ├── 04_mcmc_mechanics_from_scratch.ipynb
     ├── 05_mcmc_production_diagnostics.ipynb
     ├── 06_calibrating_bayesian_decay_and_memory.ipynb
-    ├── 07_bayesian_decision_theory_and_predictive_checks.ipynb
-    ├── appendix_understanding_the_hessian_matrix.ipynb
-    ├── appendix_frequentist_vs_bayesian_tolerance_intervals.ipynb
-    ├── appendix_frequentist_vs_bayesian_flaky_tests.ipynb
-    └── appendix_test_promotion_heuristics_vs_bayes.ipynb
+    └── 07_bayesian_decision_theory_and_predictive_checks.ipynb
 ```
 
 ---
 
-## 🛠️ Step-by-Step Server & Library Setup
+## 🛠️ Step-by-Step Environment Setup
 
 Follow these instructions to configure your environment and run the worksheets locally.
 
@@ -201,15 +194,3 @@ jupyter lab
 Once the browser opens:
 - For Python: navigate to `python/` and open `00_START_HERE.ipynb` (Kernel: **`Python 3 (Bayesian Intro)`**).
 - For R: navigate to `r/` and open `00_START_HERE.ipynb` (Kernel: **`R`**).
-
----
-
-### Alternative: Running in VS Code or Positron 💻
-
-If you prefer an IDE:
-1. Open the cloned folder in **VS Code**: `code .`
-2. Install the **Python** and **Jupyter** extensions (and optionally the **R** extension).
-3. Open any `.ipynb` file in `python/` or `r/`.
-4. Click the kernel picker in the top-right corner:
-   - For Python: select `.venv (Python 3.x)`.
-   - For R: select `R (ir)`.
