@@ -44,6 +44,7 @@ To deliver both deep physical intuition and production mathematical/engineering 
 | **Appendix B** | **[Appendix B: Tolerance Intervals](conceptual/appendix_b_tolerance_intervals_and_decision_sizing.ipynb)** | **[Appendix: Tolerance Intervals](python/appendix_frequentist_vs_bayesian_tolerance_intervals.ipynb)** | The 3 Kinds of Intervals (CI vs PI vs TI), Plug-In Fallacy exposed, ISO 16269-6, Posterior predictive sampling |
 | **Appendix C** | **[Appendix C: Verifying Flaky Fixes](conceptual/appendix_c_verifying_flaky_test_fixes.ipynb)** | **[Appendix C: Verifying Flaky Fixes](python/appendix_frequentist_vs_bayesian_flaky_tests.ipynb)** | The 50-Sided Die (100 passes prove nothing), Courtroom Shoe Print ($BF=4.0$), Wald's SPRT, Shake table |
 | **Appendix D** | **[Appendix D: CI Test Promotion](conceptual/appendix_d_test_promotion_heuristics_vs_bayes.ipynb)** | **[Appendix D: Test Promotion Heuristics](python/appendix_test_promotion_heuristics_vs_bayes.ipynb)** | Gambler's Fallacy in CI, 4 Traps of Streaks (58.4% broken test pass), Dynamic Bayesian filter |
+| **Appendix E** | **[Appendix E: Framework Reliability](conceptual/appendix_e_framework_reliability_and_tolerance_contracts.ipynb)** | **[Appendix: Framework Reliability](python/appendix_framework_reliability_and_tolerance_contracts.ipynb)** | Discrete Tolerance Contracts, Serial Compounding ($R_{\text{suite}} \approx (1-\theta)^K$), Two-Tier Guarantee, Shake Table |
 | **Case Studies**| **[Chapter 8: Real-World Case Studies](conceptual/08_case_studies_flaky_tests_and_pipeline_decisions.ipynb)** | **[Appendices C & D](python/appendix_frequentist_vs_bayesian_flaky_tests.ipynb)** | End-to-end reliability engineering pipeline decision synthesis & master reference matrix |
 
 ---
@@ -82,7 +83,8 @@ bayesian-inference-intro/
 │   ├── appendix_a_understanding_the_hessian_matrix.ipynb
 │   ├── appendix_b_tolerance_intervals_and_decision_sizing.ipynb
 │   ├── appendix_c_verifying_flaky_test_fixes.ipynb
-│   └── appendix_d_test_promotion_heuristics_vs_bayes.ipynb
+│   ├── appendix_d_test_promotion_heuristics_vs_bayes.ipynb
+│   └── appendix_e_framework_reliability_and_tolerance_contracts.ipynb
 ├── python/                                    <-- Python Track (Python 3 kernel)
 │   ├── README.md                              <-- Python track setup & guide
 │   ├── 00_START_HERE.ipynb                    <-- Python Course syllabus & Decision Guide
@@ -98,7 +100,8 @@ bayesian-inference-intro/
 │   ├── appendix_understanding_the_hessian_matrix.ipynb
 │   ├── appendix_frequentist_vs_bayesian_tolerance_intervals.ipynb
 │   ├── appendix_frequentist_vs_bayesian_flaky_tests.ipynb
-│   └── appendix_test_promotion_heuristics_vs_bayes.ipynb
+│   ├── appendix_test_promotion_heuristics_vs_bayes.ipynb
+│   └── appendix_framework_reliability_and_tolerance_contracts.ipynb
 └── r/                                         <-- R Track (IRkernel)
     ├── README.md                              <-- R track setup & guide
     ├── 00_START_HERE.ipynb                    <-- R Course syllabus & Decision Guide
