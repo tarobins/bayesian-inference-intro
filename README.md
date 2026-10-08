@@ -49,6 +49,16 @@ To deliver both deep physical intuition and production mathematical/engineering 
 
 ---
 
+## 📊 Applied Statistical Inference Worksheets
+
+| Worksheet | Conceptual Guide (`conceptual/`) | Python Lab (`python/`) | R Lab (`r/`) | Core Focus & Techniques |
+| :--- | :--- | :--- | :--- | :--- |
+| **Frequentist Mean** | **[The 100 Universes](conceptual/sheet_calculating_a_mean_in_a_frequentist_world.ipynb)** | **[Calculating a Mean (Freq)](python/sheet_calculating_a_mean_in_a_frequentist_world.ipynb)** | **[Calculating a Mean (Freq)](r/sheet_calculating_a_mean_in_a_frequentist_world.ipynb)** | Point estimation, unbiasedness, Bessel's correction ($n-1$), Standard Error ($SE = s/\sqrt{n}$), CLT convergence, 100 Universes CI, bootstrap, and hypothesis testing duality. |
+| **Bayesian Mean** | **[The Tug-of-War](conceptual/sheet_calculating_a_mean_in_a_bayesian_world.ipynb)** | **[Calculating a Mean (Bayes)](python/sheet_calculating_a_mean_in_a_bayesian_world.ipynb)** | **[Calculating a Mean (Bayes)](r/sheet_calculating_a_mean_in_a_bayesian_world.ipynb)** | Prior-to-posterior updating, Gaussian precision tug-of-war ($\tau = 1/\sigma^2$), joint MCMC for $(\mu, \sigma)$, 95% HDI, Posterior Predictive simulation, and robust Student-$t$. |
+| **Comparing Two Groups** | **[Two-Sample Comparison](conceptual/sheet_t_test_frequentist_vs_bayesian.ipynb)** | **[The $t$-Test (Freq vs Bayes)](python/sheet_t_test_frequentist_vs_bayesian.ipynb)** | **[The $t$-Test (Freq vs Bayes)](r/sheet_t_test_frequentist_vs_bayesian.ipynb)** | Two-sample comparisons side-by-side: Welch's $t$-test & NHST fallacies vs. JZS Bayes Factors ($BF_{10}$) vs. Kruschke's BEST model, ROPE, and peeking traps. |
+
+---
+
 ## 🧭 Computational Strategy Decision Matrix
 
 | Method | When to Choose | Scale Limits ($D$ Parameters) | Speed / Complexity | Primary Trade-Off / Failure Mode |
@@ -80,6 +90,9 @@ bayesian-inference-intro/
 │   ├── 06_dynamic_world_bayesian_memory_and_decay.ipynb
 │   ├── 07_making_decisions_under_uncertainty.ipynb
 │   ├── 08_case_studies_flaky_tests_and_pipeline_decisions.ipynb
+│   ├── sheet_calculating_a_mean_in_a_frequentist_world.ipynb
+│   ├── sheet_calculating_a_mean_in_a_bayesian_world.ipynb
+│   ├── sheet_t_test_frequentist_vs_bayesian.ipynb
 │   ├── appendix_a_understanding_the_hessian_matrix.ipynb
 │   ├── appendix_b_tolerance_intervals_and_decision_sizing.ipynb
 │   ├── appendix_c_verifying_flaky_test_fixes.ipynb
@@ -97,6 +110,9 @@ bayesian-inference-intro/
 │   ├── 05_mcmc_production_diagnostics.ipynb
 │   ├── 06_calibrating_bayesian_decay_and_memory.ipynb
 │   ├── 07_bayesian_decision_theory_and_predictive_checks.ipynb
+│   ├── sheet_calculating_a_mean_in_a_frequentist_world.ipynb
+│   ├── sheet_calculating_a_mean_in_a_bayesian_world.ipynb
+│   ├── sheet_t_test_frequentist_vs_bayesian.ipynb
 │   ├── appendix_understanding_the_hessian_matrix.ipynb
 │   ├── appendix_frequentist_vs_bayesian_tolerance_intervals.ipynb
 │   ├── appendix_frequentist_vs_bayesian_flaky_tests.ipynb
@@ -113,7 +129,10 @@ bayesian-inference-intro/
     ├── 04_mcmc_mechanics_from_scratch.ipynb
     ├── 05_mcmc_production_diagnostics.ipynb
     ├── 06_calibrating_bayesian_decay_and_memory.ipynb
-    └── 07_bayesian_decision_theory_and_predictive_checks.ipynb
+    ├── 07_bayesian_decision_theory_and_predictive_checks.ipynb
+    ├── sheet_calculating_a_mean_in_a_frequentist_world.ipynb
+    ├── sheet_calculating_a_mean_in_a_bayesian_world.ipynb
+    └── sheet_t_test_frequentist_vs_bayesian.ipynb
 ```
 
 ---

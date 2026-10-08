@@ -26,6 +26,16 @@ Welcome to the **R Track** of the Bayesian Inference curriculum! This track prov
 
 ---
 
+## 📊 Applied Statistical Inference Worksheets
+
+| Worksheet | Notebook | Conceptual Companion (`conceptual/`) | Core Focus & Techniques |
+| :--- | :--- | :--- | :--- |
+| **Frequentist Mean** | **[sheet_calculating_a_mean_in_a_frequentist_world.ipynb](sheet_calculating_a_mean_in_a_frequentist_world.ipynb)** | **[The 100 Universes](../conceptual/sheet_calculating_a_mean_in_a_frequentist_world.ipynb)** | Point estimation, unbiasedness, Bessel's correction ($n-1$), Standard Error ($SE = s/\sqrt{n}$), CLT convergence, 100 Universes CI, bootstrap, and hypothesis testing duality. |
+| **Bayesian Mean** | **[sheet_calculating_a_mean_in_a_bayesian_world.ipynb](sheet_calculating_a_mean_in_a_bayesian_world.ipynb)** | **[The Tug-of-War](../conceptual/sheet_calculating_a_mean_in_a_bayesian_world.ipynb)** | Prior-to-posterior updating, Gaussian precision tug-of-war ($\tau = 1/\sigma^2$), joint MCMC for $(\mu, \sigma)$, 95% HDI, Posterior Predictive simulation, and robust Student-$t$. |
+| **Comparing Two Groups** | **[sheet_t_test_frequentist_vs_bayesian.ipynb](sheet_t_test_frequentist_vs_bayesian.ipynb)** | **[Two-Sample Comparison](../conceptual/sheet_t_test_frequentist_vs_bayesian.ipynb)** | Two-sample comparisons side-by-side: Welch's $t$-test & NHST fallacies vs. JZS Bayes Factors ($BF_{10}$) vs. Kruschke's BEST model, ROPE, and peeking traps. |
+
+---
+
 ## 🛠️ Quickstart: Environment Setup
 
 From the repository root (`bayesian-inference-intro/`):

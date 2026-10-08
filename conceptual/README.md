@@ -32,3 +32,13 @@ Every chapter in the Conceptual track is tethered directly to its executable lab
 | **Appendix C** | **[appendix_c_verifying_flaky_test_fixes.ipynb](appendix_c_verifying_flaky_test_fixes.ipynb)** | **[Appendix C: Verifying Flaky Fixes](../python/appendix_frequentist_vs_bayesian_flaky_tests.ipynb)** | Why 0/100 Passes Proves Nothing, The Courtroom Shoe Print, The Hydraulic Shake Table |
 | **Appendix D** | **[appendix_d_test_promotion_heuristics_vs_bayes.ipynb](appendix_d_test_promotion_heuristics_vs_bayes.ipynb)** | **[Appendix D: Test Promotion Heuristics](../python/appendix_test_promotion_heuristics_vs_bayes.ipynb)** | The Gambler's Fallacy in CI, Survivorship Bias, 4 Traps of Streaks, Dynamic Memory State Machine |
 | **Appendix E** | **[appendix_e_framework_reliability_and_tolerance_contracts.ipynb](appendix_e_framework_reliability_and_tolerance_contracts.ipynb)** | **[Appendix: Framework Reliability](../python/appendix_framework_reliability_and_tolerance_contracts.ipynb)** | The Two-Tier Tolerance Contract, Serial Compounding ($R_{\text{suite}} \approx (1-\theta)^K$), False Discovery Rate (FDR), Shake Table |
+
+---
+
+## 📊 Applied Conceptual Guides
+
+| Guide | Notebook | Python Lab (`python/`) | R Lab (`r/`) | Core Physical Mental Model |
+| :--- | :--- | :--- | :--- | :--- |
+| **Frequentist Mean** | **[sheet_calculating_a_mean_in_a_frequentist_world.ipynb](sheet_calculating_a_mean_in_a_frequentist_world.ipynb)** | **[Calculating a Mean (Freq)](../python/sheet_calculating_a_mean_in_a_frequentist_world.ipynb)** | **[Calculating a Mean (Freq)](../r/sheet_calculating_a_mean_in_a_frequentist_world.ipynb)** | The 100 Parallel Universes, Bessel's Stolen Degree of Freedom, The Plinko Board CLT |
+| **Bayesian Mean** | **[sheet_calculating_a_mean_in_a_bayesian_world.ipynb](sheet_calculating_a_mean_in_a_bayesian_world.ipynb)** | **[Calculating a Mean (Bayes)](../python/sheet_calculating_a_mean_in_a_bayesian_world.ipynb)** | **[Calculating a Mean (Bayes)](../r/sheet_calculating_a_mean_in_a_bayesian_world.ipynb)** | The Spring-Loaded Tug-of-War, Precision as Stiffness, Mountain Waterline HDI |
+| **Comparing Two Groups** | **[sheet_t_test_frequentist_vs_bayesian.ipynb](sheet_t_test_frequentist_vs_bayesian.ipynb)** | **[The $t$-Test (Freq vs Bayes)](../python/sheet_t_test_frequentist_vs_bayesian.ipynb)** | **[The $t$-Test (Freq vs Bayes)](../r/sheet_t_test_frequentist_vs_bayesian.ipynb)** | The 3 Fatal Fallacies of NHST, Courtroom Evidence Scales, The ROPE Ruler |
