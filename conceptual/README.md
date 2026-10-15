@@ -32,6 +32,7 @@ Every chapter in the Conceptual track is tethered directly to its executable lab
 | **Appendix C** | **[appendix_c_verifying_flaky_test_fixes.ipynb](appendix_c_verifying_flaky_test_fixes.ipynb)** | **[Appendix C: Verifying Flaky Fixes](../python/appendix_frequentist_vs_bayesian_flaky_tests.ipynb)** | Why 0/100 Passes Proves Nothing, The Courtroom Shoe Print, The Hydraulic Shake Table |
 | **Appendix D** | **[appendix_d_test_promotion_heuristics_vs_bayes.ipynb](appendix_d_test_promotion_heuristics_vs_bayes.ipynb)** | **[Appendix D: Test Promotion Heuristics](../python/appendix_test_promotion_heuristics_vs_bayes.ipynb)** | The Gambler's Fallacy in CI, Survivorship Bias, 4 Traps of Streaks, Dynamic Memory State Machine |
 | **Appendix E** | **[appendix_e_framework_reliability_and_tolerance_contracts.ipynb](appendix_e_framework_reliability_and_tolerance_contracts.ipynb)** | **[Appendix: Framework Reliability](../python/appendix_framework_reliability_and_tolerance_contracts.ipynb)** | The Two-Tier Tolerance Contract, Serial Compounding ($R_{\text{suite}} \approx (1-\theta)^K$), False Discovery Rate (FDR), Shake Table |
+| **Appendix F** | **[appendix_f_information_theory_and_culprit_search.ipynb](appendix_f_information_theory_and_culprit_search.ipynb)** | **[Appendix: Culprit Search](../python/appendix_information_theory_and_culprit_search.ipynb)** | Information Theory in Bits, Changepoints, Active Learning, Flake Attribution |
 
 ---
 

@@ -45,6 +45,7 @@ To deliver both deep physical intuition and production mathematical/engineering 
 | **Appendix C** | **[Appendix C: Verifying Flaky Fixes](conceptual/appendix_c_verifying_flaky_test_fixes.ipynb)** | **[Appendix C: Verifying Flaky Fixes](python/appendix_frequentist_vs_bayesian_flaky_tests.ipynb)** | The 50-Sided Die (100 passes prove nothing), Courtroom Shoe Print ($BF=4.0$), Wald's SPRT, Shake table |
 | **Appendix D** | **[Appendix D: CI Test Promotion](conceptual/appendix_d_test_promotion_heuristics_vs_bayes.ipynb)** | **[Appendix D: Test Promotion Heuristics](python/appendix_test_promotion_heuristics_vs_bayes.ipynb)** | Gambler's Fallacy in CI, 4 Traps of Streaks (58.4% broken test pass), Dynamic Bayesian filter |
 | **Appendix E** | **[Appendix E: Framework Reliability](conceptual/appendix_e_framework_reliability_and_tolerance_contracts.ipynb)** | **[Appendix: Framework Reliability](python/appendix_framework_reliability_and_tolerance_contracts.ipynb)** | Discrete Tolerance Contracts, Serial Compounding ($R_{\text{suite}} \approx (1-\theta)^K$), Two-Tier Guarantee, Shake Table |
+| **Appendix F** | **[Appendix F: Culprit Search](conceptual/appendix_f_information_theory_and_culprit_search.ipynb)** | **[Appendix: Culprit Search](python/appendix_information_theory_and_culprit_search.ipynb)** | Information Theory (Entropy, Mutual Info), Changepoints, Active Learning, Flake Attribution |
 | **Case Studies**| **[Chapter 8: Real-World Case Studies](conceptual/08_case_studies_flaky_tests_and_pipeline_decisions.ipynb)** | **[Appendices C & D](python/appendix_frequentist_vs_bayesian_flaky_tests.ipynb)** | End-to-end reliability engineering pipeline decision synthesis & master reference matrix |
 
 ---
@@ -97,7 +98,8 @@ bayesian-inference-intro/
 │   ├── appendix_b_tolerance_intervals_and_decision_sizing.ipynb
 │   ├── appendix_c_verifying_flaky_test_fixes.ipynb
 │   ├── appendix_d_test_promotion_heuristics_vs_bayes.ipynb
-│   └── appendix_e_framework_reliability_and_tolerance_contracts.ipynb
+│   ├── appendix_e_framework_reliability_and_tolerance_contracts.ipynb
+│   └── appendix_f_information_theory_and_culprit_search.ipynb
 ├── python/                                    <-- Python Track (Python 3 kernel)
 │   ├── README.md                              <-- Python track setup & guide
 │   ├── 00_START_HERE.ipynb                    <-- Python Course syllabus & Decision Guide
@@ -117,7 +119,8 @@ bayesian-inference-intro/
 │   ├── appendix_frequentist_vs_bayesian_tolerance_intervals.ipynb
 │   ├── appendix_frequentist_vs_bayesian_flaky_tests.ipynb
 │   ├── appendix_test_promotion_heuristics_vs_bayes.ipynb
-│   └── appendix_framework_reliability_and_tolerance_contracts.ipynb
+│   ├── appendix_framework_reliability_and_tolerance_contracts.ipynb
+│   └── appendix_information_theory_and_culprit_search.ipynb
 └── r/                                         <-- R Track (IRkernel)
     ├── README.md                              <-- R track setup & guide
     ├── 00_START_HERE.ipynb                    <-- R Course syllabus & Decision Guide
@@ -132,7 +135,9 @@ bayesian-inference-intro/
     ├── 07_bayesian_decision_theory_and_predictive_checks.ipynb
     ├── sheet_calculating_a_mean_in_a_frequentist_world.ipynb
     ├── sheet_calculating_a_mean_in_a_bayesian_world.ipynb
-    └── sheet_t_test_frequentist_vs_bayesian.ipynb
+    ├── sheet_t_test_frequentist_vs_bayesian.ipynb
+    ├── appendix_framework_reliability_and_tolerance_contracts.ipynb
+    └── appendix_information_theory_and_culprit_search.ipynb
 ```
 
 ---
