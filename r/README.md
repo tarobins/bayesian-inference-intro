@@ -1,39 +1,48 @@
 # Bayesian Inference: A Practical Introduction — R Track 🔵
 
-Welcome to the **R Track** of the Bayesian Inference curriculum! This track provides complete implementations of all foundational principles, numerical algorithms, diagnostics, dynamic filtering, and decision theory using **Base R**, `optim`, `rethinking` (Stan HMC), `coda`, and `loo`.
+Welcome to the **R Track** of the Bayesian Inference curriculum! This track
+provides complete, pre-rendered implementations across all 23 chapters
+(`00`–`22`) using **Base R**, `optim`, `MASS`, `coda`, and `loo`, complete with
+diagnostic plots and 3-tier scaffolding exercises.
+
+Every chapter in `r/` is synchronized 1-to-1 with its conceptual guide in
+**[`conceptual/`](../conceptual/README.md)** and its Python counterpart in
+**[`python/`](../python/README.md)**.
 
 ---
 
-## 📚 Course Syllabus & Learning Progression
+## 📚 Complete 23-Chapter Syllabus (`00`–`22`)
 
-| Sheet | Notebook | Core Focus & Techniques |
-| :--- | :--- | :--- |
-| **00** | **[00_START_HERE.ipynb](00_START_HERE.ipynb)** | Syllabus, environment verification, Decision Guide & Rosetta Stone |
-| **01** | **[01_foundations_and_conjugate_updating.ipynb](01_foundations_and_conjugate_updating.ipynb)** | Exact Beta-Binomial conjugacy, Euler integral, Dutch books, Laplace Rule of Succession, online CI tracking |
-| **01b** | **[01b_normal_conjugate_updating.ipynb](01b_normal_conjugate_updating.ipynb)** | Continuous Normal conjugacy, precision, inverse-variance weighting, completing the square, sensor fusion |
-| **02** | **[02_frequentist_vs_grid_approximation.ipynb](02_frequentist_vs_grid_approximation.ipynb)** | Frequentist $t$-test vs. 2D Grid Approximation, prior shrinkage & sensitivity |
-| **03** | **[03_quadratic_laplace_approximation.ipynb](03_quadratic_laplace_approximation.ipynb)** | Fast prototyping with `optim(..., hessian=TRUE)`, `rethinking::quap`, multivariate normal draws |
-| **03b** | **[03b_markov_chains_and_detailed_balance.ipynb](03b_markov_chains_and_detailed_balance.ipynb)** | Foundations of Markov chains, transition matrix $P$, stationary distribution $\pi P = \pi$, probability flows, detailed balance proof, discrete Metropolis |
-| **04** | **[04_mcmc_mechanics_from_scratch.ipynb](04_mcmc_mechanics_from_scratch.ipynb)** | Metropolis-Hastings from first principles, detailed balance, proposal step-size tuning |
-| **05** | **[05_mcmc_production_diagnostics.ipynb](05_mcmc_production_diagnostics.ipynb)** | Multi-chain sampling, Gelman-Rubin $\hat{R}$, Effective Sample Size ($ESS$), WAIC, and PSIS-LOO |
-| **06** | **[06_calibrating_bayesian_decay_and_memory.ipynb](06_calibrating_bayesian_decay_and_memory.ipynb)** | Dynamic non-stationary state filtering, exponential memory decay ($\gamma$), pre-quential backtesting |
-| **07** | **[07_bayesian_decision_theory_and_predictive_checks.ipynb](07_bayesian_decision_theory_and_predictive_checks.ipynb)** | Actionable systems, $L_2$ vs $L_1$ vs $L_0$ loss, asymmetric business cost cutoffs, Prior & Posterior Predictive Checks |
-| **Appendix A** | **[appendix_understanding_the_hessian_matrix.ipynb](../python/appendix_understanding_the_hessian_matrix.ipynb)** | Visual primer on Hessian & Jacobian matrices, 3D bowl/dome/saddle geometry, Newton optimization, and Laplace precision duality ($\Sigma = H^{-1}$) |
-| **Appendix B** | **[appendix_frequentist_vs_bayesian_tolerance_intervals.ipynb](../python/appendix_frequentist_vs_bayesian_tolerance_intervals.ipynb)** | Frequentist vs. Bayesian predictive guarantees: Flaw of Averages, Student's $t$ Prediction Bounds, ISO Tolerance Limits, and Asymmetric Loss |
-| **Appendix C** | **[appendix_frequentist_vs_bayesian_flaky_tests.ipynb](../python/appendix_frequentist_vs_bayesian_flaky_tests.ipynb)** | Verifying flaky test fixes: why 0/100 passes proves nothing, Fisher's Exact Test, Rule of Three, Wald's SPRT, Beta-Binomial Bayes Factors, and CI loss |
-| **Appendix D** | **[appendix_test_promotion_heuristics_vs_bayes.ipynb](../python/appendix_test_promotion_heuristics_vs_bayes.ipynb)** | CI/CD test promotion: (N, M) passing streaks vs. Bayesian dynamic discount filtering and asymmetric loss |
-| **Appendix E** | **[appendix_framework_reliability_and_tolerance_contracts.ipynb](appendix_framework_reliability_and_tolerance_contracts.ipynb)** | Testing framework reliability: serial suite compounding, Two-Tier Posterior Predictive guarantee, Base R simulation, and SPRT under stress |
-| **Appendix F** | **[appendix_information_theory_and_culprit_search.ipynb](appendix_information_theory_and_culprit_search.ipynb)** | Active Learning & Flake Culprit Search: Shannon Entropy, Perplexity, Beta-Bernoulli Changepoints, Mutual Information, and CI flake attribution |
-
----
-
-## 📊 Applied Statistical Inference Worksheets
-
-| Worksheet | Notebook | Conceptual Companion (`conceptual/`) | Core Focus & Techniques |
+| Ch | Chapter Notebook | Companion Tracks | Core Concepts & Techniques |
 | :--- | :--- | :--- | :--- |
-| **Frequentist Mean** | **[sheet_calculating_a_mean_in_a_frequentist_world.ipynb](sheet_calculating_a_mean_in_a_frequentist_world.ipynb)** | **[The 100 Universes](../conceptual/sheet_calculating_a_mean_in_a_frequentist_world.ipynb)** | Point estimation, unbiasedness, Bessel's correction ($n-1$), Standard Error ($SE = s/\sqrt{n}$), CLT convergence, 100 Universes CI, bootstrap, and hypothesis testing duality. |
-| **Bayesian Mean** | **[sheet_calculating_a_mean_in_a_bayesian_world.ipynb](sheet_calculating_a_mean_in_a_bayesian_world.ipynb)** | **[The Tug-of-War](../conceptual/sheet_calculating_a_mean_in_a_bayesian_world.ipynb)** | Prior-to-posterior updating, Gaussian precision tug-of-war ($\tau = 1/\sigma^2$), joint MCMC for $(\mu, \sigma)$, 95% HDI, Posterior Predictive simulation, and robust Student-$t$. |
-| **Comparing Two Groups** | **[sheet_t_test_frequentist_vs_bayesian.ipynb](sheet_t_test_frequentist_vs_bayesian.ipynb)** | **[Two-Sample Comparison](../conceptual/sheet_t_test_frequentist_vs_bayesian.ipynb)** | Two-sample comparisons side-by-side: Welch's $t$-test & NHST fallacies vs. JZS Bayes Factors ($BF_{10}$) vs. Kruschke's BEST model, ROPE, and peeking traps. |
+| **Part I: Foundations, Conjugacy & Estimating a Mean** | | | |
+| **00** | **[Ch 00: Course Overview, The Three Paradigms & Roadmap](00_START_HERE.ipynb)** | [📖 Conceptual](../conceptual/00_START_HERE.ipynb) · [🐍 Python](../python/00_START_HERE.ipynb) | The Three Paradigms, 100 Parallel Universes, Intractable Denominator, Course Roadmap |
+| **01** | **[Ch 01: Discrete Conjugacy — Beta-Binomial Updating](01_foundations_and_conjugate_updating.ipynb)** | [📖 Conceptual](../conceptual/01_foundations_and_conjugate_updating.ipynb) · [🐍 Python](../python/01_foundations_and_conjugate_updating.ipynb) | Balance Scale of Pebbles, Euler Beta integral, Laplace's Rule of Succession, streaming CI updates |
+| **02** | **[Ch 02: Continuous Conjugacy — Normal Models & Precision Tug-of-War](02_normal_conjugate_updating.ipynb)** | [📖 Conceptual](../conceptual/02_normal_conjugate_updating.ipynb) · [🐍 Python](../python/02_normal_conjugate_updating.ipynb) | Two GPS Sensors, Precision ($\tau = 1/\sigma^2$) as stiffness, completing the square, sensor fusion |
+| **03** | **[Ch 03: Calculating a Mean in a Frequentist World](03_calculating_a_mean_frequentist.ipynb)** | [📖 Conceptual](../conceptual/03_calculating_a_mean_frequentist.ipynb) · [🐍 Python](../python/03_calculating_a_mean_frequentist.ipynb) | 100 Parallel Universes, Bessel's correction ($n-1$), Standard Error ($s/\sqrt{n}$), CLT, bootstrap |
+| **04** | **[Ch 04: Calculating a Mean in a Bayesian World](04_calculating_a_mean_bayesian.ipynb)** | [📖 Conceptual](../conceptual/04_calculating_a_mean_bayesian.ipynb) · [🐍 Python](../python/04_calculating_a_mean_bayesian.ipynb) | Spring-Loaded Tug-of-War, joint $(\mu, \sigma)$ inference, 95% HDI vs Equal-Tailed CI, Student-$t$ |
+| **Part II: Numerical & Sampling Engines** | | | |
+| **05** | **[Ch 05: Beyond Conjugacy — 2D Grid Approximation](05_frequentist_vs_grid_approximation.ipynb)** | [📖 Conceptual](../conceptual/05_frequentist_vs_grid_approximation.ipynb) · [🐍 Python](../python/05_frequentist_vs_grid_approximation.ipynb) | Cookie Sheet of 1,000 Buckets, 2D posterior surfaces, prior sensitivity, Curse of Dimensionality |
+| **06** | **[Ch 06: Finding the Peak — Quadratic (Laplace / QUAP) Approximation](06_quadratic_laplace_approximation.ipynb)** | [📖 Conceptual](../conceptual/06_quadratic_laplace_approximation.ipynb) · [🐍 Python](../python/06_quadratic_laplace_approximation.ipynb) | Hiking in Fog, MAP optimization, 2nd-order Taylor expansion, covariance from curvature ($\Sigma = H^{-1}$) |
+| **07** | **[Ch 07: Geometry of Curvature — The Hessian Matrix & Jacobian](07_understanding_the_hessian_matrix.ipynb)** | [📖 Conceptual](../conceptual/07_understanding_the_hessian_matrix.ipynb) · [🐍 Python](../python/07_understanding_the_hessian_matrix.ipynb) | Salad Bowl, Igloo Dome, Pringle Saddle Point, Jacobian of gradient, Newton's method vs Gradient Descent |
+| **08** | **[Ch 08: Discrete Markov Chains, Stationary Equilibrium & Detailed Balance](08_markov_chains_and_detailed_balance.ipynb)** | [📖 Conceptual](../conceptual/08_markov_chains_and_detailed_balance.ipynb) · [🐍 Python](../python/08_markov_chains_and_detailed_balance.ipynb) | Memoryless Island Hopping, transition matrix $P$, stationary $\pi^* P = \pi^*$, Detailed Balance ($\pi_i P_{ij} = \pi_j P_{ji}$) |
+| **09** | **[Ch 09: First Principles — Metropolis-Hastings MCMC from Scratch](09_mcmc_mechanics_from_scratch.ipynb)** | [📖 Conceptual](../conceptual/09_mcmc_mechanics_from_scratch.ipynb) · [🐍 Python](../python/09_mcmc_mechanics_from_scratch.ipynb) | King Markov, denominator cancellation, proposal step-size tuning, traceplots, autocorrelation & ESS |
+| **10** | **[Ch 10: Production Scale — HMC Physics & Multi-Chain Diagnostics](10_mcmc_production_diagnostics.ipynb)** | [📖 Conceptual](../conceptual/10_mcmc_production_diagnostics.ipynb) · [🐍 Python](../python/10_mcmc_production_diagnostics.ipynb) | Frictionless Skate Park (HMC), Four Hikers ($\hat{R} < 1.01$), bulk/tail ESS, divergences, WAIC & PSIS-LOO |
+| **Part III: Applied Modeling, Regression, Hierarchy & Model Comparison** | | | |
+| **11** | **[Ch 11: Comparing Two Groups — The $t$-Test, Bayes Factors & BEST](11_t_test_frequentist_vs_bayesian.ipynb)** | [📖 Conceptual](../conceptual/11_t_test_frequentist_vs_bayesian.ipynb) · [🐍 Python](../python/11_t_test_frequentist_vs_bayesian.ipynb) | 3 Fatal Fallacies of NHST, Welch's $t$-test vs JZS Bayes Factors ($BF_{10}$) vs Kruschke's BEST & ROPE |
+| **12** | **[Ch 12: Bayesian Linear Regression, Poisson-Gamma Counts & GLMs](12_bayesian_regression_and_glms.ipynb)** | [📖 Conceptual](../conceptual/12_bayesian_regression_and_glms.ipynb) · [🐍 Python](../python/12_bayesian_regression_and_glms.ipynb) | Moving Spotlight, Poisson-Gamma event rates, Credible Line Band vs Predictive Ribbon, Logistic GLMs |
+| **13** | **[Ch 13: Hierarchical Models, Partial Pooling & Shrinkage](13_hierarchical_models_and_partial_pooling.ipynb)** | [📖 Conceptual](../conceptual/13_hierarchical_models_and_partial_pooling.ipynb) · [🐍 Python](../python/13_hierarchical_models_and_partial_pooling.ipynb) | No Pooling vs Complete Pooling vs Partial Pooling, Stein's Paradox, shrinkage weight $w_j$, Funnel geometry |
+| **14** | **[Ch 14: Likelihood vs. Marginal Likelihood, Occam's Razor & Model Comparison](14_marginal_likelihood_and_model_comparison.ipynb)** | [📖 Conceptual](../conceptual/14_marginal_likelihood_and_model_comparison.ipynb) · [🐍 Python](../python/14_marginal_likelihood_and_model_comparison.ipynb) | Point Likelihood vs Marginal Evidence $P(\mathcal{D}\mid\mathcal{M})$, Bayesian Occam's Razor, Lindley's Paradox, LOO-CV |
+| **Part IV: Dynamic Systems, Decision Theory & Predictive Guarantees** | | | |
+| **15** | **[Ch 15: Dynamic World — Calibrating Bayesian Memory Decay ($\gamma$)](15_calibrating_bayesian_decay_and_memory.ipynb)** | [📖 Conceptual](../conceptual/15_calibrating_bayesian_decay_and_memory.ipynb) · [🐍 Python](../python/15_calibrating_bayesian_decay_and_memory.ipynb) | 30-Day Cliff vs Fading Ink, exponential discounting ($\gamma$), effective sample horizon $N_{\text{eff}}$, prequential calibration |
+| **16** | **[Ch 16: Actionable Systems — Decision Theory, Loss Functions & Predictive Checks](16_bayesian_decision_theory_and_predictive_checks.ipynb)** | [📖 Conceptual](../conceptual/16_bayesian_decision_theory_and_predictive_checks.ipynb) · [🐍 Python](../python/16_bayesian_decision_theory_and_predictive_checks.ipynb) | Flaw of Averages (3-ft River), Smoke Alarm Matrix ($L_2, L_1, 0\text{-}1$, asymmetric loss), Sanity Mirror (Prior/Posterior PC) |
+| **17** | **[Ch 17: Predictive Guarantees — Confidence, Prediction & Tolerance Intervals](17_tolerance_intervals_and_decision_sizing.ipynb)** | [📖 Conceptual](../conceptual/17_tolerance_intervals_and_decision_sizing.ipynb) · [🐍 Python](../python/17_tolerance_intervals_and_decision_sizing.ipynb) | Confidence vs Prediction vs Tolerance Intervals, Plug-In Fallacy, ISO 16269-6 non-central $t$, Two-Tier $(p, 1-\alpha)$ guarantee |
+| **Part V: Production Reliability, CI/CD & Active Learning** | | | |
+| **18** | **[Ch 18: Gateway Synthesis — Flaky Tests, Streaks & CI Pipelines](18_case_studies_flaky_tests_and_pipelines.ipynb)** | [📖 Conceptual](../conceptual/18_case_studies_flaky_tests_and_pipelines.ipynb) · [🐍 Python](../python/18_case_studies_flaky_tests_and_pipelines.ipynb) | 50-Sided Die zero-failure trap, $(N, M)$ streak traps, End-to-End CI/CD Governance Router & Master Reference Matrix |
+| **19** | **[Ch 19: Verifying Flaky Test Fixes — Wald's SPRT & Bayes Factors](19_verifying_flaky_test_fixes.ipynb)** | [📖 Conceptual](../conceptual/19_verifying_flaky_test_fixes.ipynb) · [🐍 Python](../python/19_verifying_flaky_test_fixes.ipynb) | Why $0/100$ passes proves nothing, Fisher's Exact Test, Rule of Three, Wald's SPRT, Beta-Binomial Bayes Factor ($BF=4.0$) |
+| **20** | **[Ch 20: CI/CD Test Promotion — $(N, M)$ Streaks vs. Dynamic Bayesian Filtering](20_test_promotion_heuristics_vs_bayes.ipynb)** | [📖 Conceptual](../conceptual/20_test_promotion_heuristics_vs_bayes.ipynb) · [🐍 Python](../python/20_test_promotion_heuristics_vs_bayes.ipynb) | Gambler's Fallacy in CI, 4 hidden traps of $(N, M)$ streaks, survivorship bias, dynamic discount promotion state machine |
+| **21** | **[Ch 21: Testing Framework Reliability & Two-Tier Tolerance Contracts](21_framework_reliability_and_tolerance_contracts.ipynb)** | [📖 Conceptual](../conceptual/21_framework_reliability_and_tolerance_contracts.ipynb) · [🐍 Python](../python/21_framework_reliability_and_tolerance_contracts.ipynb) | Serial suite compounding $R_{\text{suite}} = (1-\theta)^K$, Two-Tier Posterior Predictive guarantee, False Discovery Rate (FDR) economics |
+| **22** | **[Ch 22: Active Learning & Information-Theoretic Flake Culprit Search](22_information_theory_and_culprit_search.ipynb)** | [📖 Conceptual](../conceptual/22_information_theory_and_culprit_search.ipynb) · [🐍 Python](../python/22_information_theory_and_culprit_search.ipynb) | Shannon Entropy in bits, Perplexity, Beta-Bernoulli changepoint posteriors, Mutual Information $I(C; Y)$ active bisection |
 
 ---
 
@@ -41,17 +50,9 @@ Welcome to the **R Track** of the Bayesian Inference curriculum! This track prov
 
 From the repository root (`bayesian-inference-intro/`):
 
-1. **Install R**:
-   Ensure [R 4.0+](https://cloud.r-project.org/) is installed.
-
-2. **Run the package installer and register IRkernel**:
-   ```bash
-   Rscript install_packages.R
-   ```
-   *This automatically installs `coda`, `loo`, `MASS`, `IRkernel`, and registers the kernel with Jupyter.*
-
-3. **Launch Jupyter**:
-   ```bash
-   jupyter lab
-   ```
-   Open `00_START_HERE.ipynb`, select the **`R`** kernel, and run the verification cell!
+```bash
+Rscript install_packages.R
+jupyter lab
+```
+Open **[`00_START_HERE.ipynb`](00_START_HERE.ipynb)** with the **R** kernel to
+begin!
