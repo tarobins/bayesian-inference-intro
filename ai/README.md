@@ -88,10 +88,16 @@ architecture:
    Transcribes
    the exact prompt an engineer types, the plausible hallucination returned by
    the LLM, and a detailed forensic breakdown of the mathematical flaw.
-3. **Cell 2: Part 2 — Prompting as Probabilistic Programming**: Provides a
-   formal, copy-pasteable declarative specification (`observables`,
-   `prior_model`, `likelihood_model`, `computational_invariants`,
-   `decision_loss_contract`).
+3. **Cell 2: Part 2 — Prompting as Probabilistic Programming**: Introduces
+   a **Progressive Ladder of Specification Simplicity**:
+   * **Level 1 (The 3-Sentence Micro-Spec)**: The everyday 50-word prompt
+     (Data, Prior/Baseline, Loss/Action) for fast chat conversations.
+   * **Level 2 (The Model Formula Shorthand)**: 2 lines of mathematical DSL
+     (`Model: ... Data: ... Action: ...`).
+   * **Level 3 (The Socratic Interviewer)**: A 1-sentence prompt forcing the AI
+     to interview you for required priors and costs.
+   * **Level 4 (The Production YAML Contract)**: A collapsible production schema
+     for automated linters, autonomous pipelines, and safety audits.
 4. **Cell 3: Part 3 — The 4 Mandatory Agentic Verification Gates**: Concrete
    numerical tests (Prior Predictive, Simulation-Based Calibration, Analytical
    Invariants, Posterior Predictive Retrodiction).
@@ -118,9 +124,10 @@ architecture:
    **[`00_START_HERE.ipynb`](00_START_HERE.ipynb)**
    or jump straight to Part V (**Chapters 18–22**) for production CI/CD and
    active learning.
-2. **Copy Agent Specifications**: Use the YAML contracts in Part 2 of each
-   chapter directly in your system prompts, agent prompt templates, and CI
-   configuration files.
+2. **Copy Agent Specifications**: In daily work, copy the 3-Sentence
+   Micro-Spec (Level 1) or Model Formula (Level 2) directly into LLM chats.
+   For autonomous pipelines and automated CI linters, expand the Level 4 YAML
+   contract.
 3. **Audit Your Team's Prompts**: Use Part 1 and Part 6 to evaluate and
    stress-test how your developers and AI tools reason about probability and
    uncertainty.
