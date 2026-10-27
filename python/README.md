@@ -2,7 +2,7 @@
 
 Welcome to the **Python Track** of the Bayesian Inference curriculum! This
 track provides complete, production-grade implementations across all 23
-chapters (`00`–`22`) using **NumPy**, **SciPy**, **Matplotlib**, **Pandas**,
+chapters (`00`–`23`) using **NumPy**, **SciPy**, **Matplotlib**, **Pandas**,
 and **SymPy**, complete with pre-rendered visualizations and 3-tier exercises.
 
 Every chapter in `python/` is synchronized 1-to-1 with its conceptual guide in
@@ -11,7 +11,7 @@ Every chapter in `python/` is synchronized 1-to-1 with its conceptual guide in
 
 ---
 
-## 📚 Complete 23-Chapter Syllabus (`00`–`22`)
+## 📚 Complete 23-Chapter Syllabus (`00`–`23`)
 
 | Ch | Chapter Notebook | Companion Tracks | Core Concepts & Techniques |
 | :--- | :--- | :--- | :--- |
@@ -42,7 +42,7 @@ Every chapter in `python/` is synchronized 1-to-1 with its conceptual guide in
 | **19** | **[Ch 19: Verifying Flaky Test Fixes — Wald's SPRT & Bayes Factors](19_verifying_flaky_test_fixes.ipynb)** | [🤖 AI-Native](../ai/19_verifying_flaky_test_fixes.ipynb) · [📖 Conceptual](../conceptual/19_verifying_flaky_test_fixes.ipynb) · [🔵 R](../r/19_verifying_flaky_test_fixes.ipynb) | Why $0/100$ passes proves nothing, Fisher's Exact Test, Rule of Three, Wald's SPRT, Beta-Binomial Bayes Factor ($BF=4.0$) |
 | **20** | **[Ch 20: CI/CD Test Promotion — $(N, M)$ Streaks vs. Dynamic Bayesian Filtering](20_test_promotion_heuristics_vs_bayes.ipynb)** | [🤖 AI-Native](../ai/20_test_promotion_heuristics_vs_bayes.ipynb) · [📖 Conceptual](../conceptual/20_test_promotion_heuristics_vs_bayes.ipynb) · [🔵 R](../r/20_test_promotion_heuristics_vs_bayes.ipynb) | Gambler's Fallacy in CI, 4 hidden traps of $(N, M)$ streaks, survivorship bias, dynamic discount promotion state machine |
 | **21** | **[Ch 21: Testing Framework Reliability & Two-Tier Tolerance Contracts](21_framework_reliability_and_tolerance_contracts.ipynb)** | [🤖 AI-Native](../ai/21_framework_reliability_and_tolerance_contracts.ipynb) · [📖 Conceptual](../conceptual/21_framework_reliability_and_tolerance_contracts.ipynb) · [🔵 R](../r/21_framework_reliability_and_tolerance_contracts.ipynb) | Serial suite compounding $R_{\text{suite}} = (1-\theta)^K$, Two-Tier Posterior Predictive guarantee, False Discovery Rate (FDR) economics |
-| **22** | **[Ch 22: Active Learning & Information-Theoretic Flake Culprit Search](22_information_theory_and_culprit_search.ipynb)** | [🤖 AI-Native](../ai/22_information_theory_and_culprit_search.ipynb) · [📖 Conceptual](../conceptual/22_information_theory_and_culprit_search.ipynb) · [🔵 R](../r/22_information_theory_and_culprit_search.ipynb) | Shannon Entropy in bits, Perplexity, Beta-Bernoulli changepoint posteriors, Mutual Information $I(C; Y)$ active bisection |
+| **22** | **[Ch 22: Active Learning & Information-Theoretic Flake Culprit Search](23_active_learning_and_culprit_search.ipynb)** | [🤖 AI-Native](../ai/23_active_learning_and_culprit_search.ipynb) · [📖 Conceptual](../conceptual/23_active_learning_and_culprit_search.ipynb) · [🔵 R](../r/23_active_learning_and_culprit_search.ipynb) | Shannon Entropy in bits, Perplexity, Beta-Bernoulli changepoint posteriors, Mutual Information $I(C; Y)$ active bisection |
 
 ---
 

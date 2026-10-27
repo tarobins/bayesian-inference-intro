@@ -3,12 +3,12 @@
 
 Welcome to **Bayesian Inference: A Practical Introduction**! This repository
 contains a complete, production-grade hands-on curriculum structured in a
-unified **5-Part, 23-Chapter (`00`–`22`) learning progression**:
+unified **5-Part, 24-Chapter (`00`–`23`) learning progression**:
 1. **Part I (`00`–`04`)**: Foundations, Conjugacy & Estimating a Mean
 2. **Part II (`05`–`10`)**: Numerical & Sampling Engines (Grids, Curvature & MCMC)
 3. **Part III (`11`–`14`)**: Applied Modeling, Regression, Hierarchy & Model Comparison
 4. **Part IV (`15`–`17`)**: Dynamic Systems, Decision Theory & Predictive Guarantees
-5. **Part V (`18`–`22`)**: Production Reliability, CI/CD & Active Learning Case Studies
+5. **Part V (`18`–`23`)**: Production Reliability, CI/CD & Active Learning Case Studies
 
 ---
 
@@ -46,7 +46,7 @@ tracks** sharing identical filenames (`00_START_HERE.ipynb` through
 
 ---
 
-## 📚 Master 23-Chapter Curriculum Syllabus (`00`–`22`)
+## 📚 Master 23-Chapter Curriculum Syllabus (`00`–`23`)
 
 | Ch | Conceptual Track (`conceptual/`) | AI-Native Track (`ai/`) | Python Lab (`python/`) | R Lab (`r/`) | Key Concepts & Physical Mental Models |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -77,7 +77,8 @@ tracks** sharing identical filenames (`00_START_HERE.ipynb` through
 | **19** | **[Ch 19: Verifying Flaky Test Fixes — Wald's SPRT & Bayes Factors](conceptual/19_verifying_flaky_test_fixes.ipynb)** | **[Ch 19 (AI)](ai/19_verifying_flaky_test_fixes.ipynb)** | **[Ch 19 (Python)](python/19_verifying_flaky_test_fixes.ipynb)** | **[Ch 19 (R)](r/19_verifying_flaky_test_fixes.ipynb)** | Why $0/100$ passes proves nothing, Fisher's Exact Test, Rule of Three, Wald's SPRT, Beta-Binomial Bayes Factor ($BF=4.0$) |
 | **20** | **[Ch 20: CI/CD Test Promotion — $(N, M)$ Streaks vs. Dynamic Bayesian Filtering](conceptual/20_test_promotion_heuristics_vs_bayes.ipynb)** | **[Ch 20 (AI)](ai/20_test_promotion_heuristics_vs_bayes.ipynb)** | **[Ch 20 (Python)](python/20_test_promotion_heuristics_vs_bayes.ipynb)** | **[Ch 20 (R)](r/20_test_promotion_heuristics_vs_bayes.ipynb)** | Gambler's Fallacy in CI, 4 hidden traps of $(N, M)$ streaks, survivorship bias, dynamic discount promotion state machine |
 | **21** | **[Ch 21: Testing Framework Reliability & Two-Tier Tolerance Contracts](conceptual/21_framework_reliability_and_tolerance_contracts.ipynb)** | **[Ch 21 (AI)](ai/21_framework_reliability_and_tolerance_contracts.ipynb)** | **[Ch 21 (Python)](python/21_framework_reliability_and_tolerance_contracts.ipynb)** | **[Ch 21 (R)](r/21_framework_reliability_and_tolerance_contracts.ipynb)** | Serial suite compounding $R_{\text{suite}} = (1-\theta)^K$, Two-Tier Posterior Predictive guarantee, False Discovery Rate (FDR) economics |
-| **22** | **[Ch 22: Active Learning & Information-Theoretic Flake Culprit Search](conceptual/22_information_theory_and_culprit_search.ipynb)** | **[Ch 22 (AI)](ai/22_information_theory_and_culprit_search.ipynb)** | **[Ch 22 (Python)](python/22_information_theory_and_culprit_search.ipynb)** | **[Ch 22 (R)](r/22_information_theory_and_culprit_search.ipynb)** | Shannon Entropy in bits, Perplexity, Beta-Bernoulli changepoint posteriors, Mutual Information $I(C; Y)$ active bisection |
+| **22** | **[Ch 22: Foundations of Information Theory, Divergence & Information Geometry](conceptual/22_foundations_of_information_theory.ipynb)** | **[Ch 22 (AI)](ai/22_foundations_of_information_theory.ipynb)** | **[Ch 22 (Python)](python/22_foundations_of_information_theory.ipynb)** | **[Ch 22 (R)](r/22_foundations_of_information_theory.ipynb)** | Shannon Entropy in bits, MaxEnt Priors (Jaynes), Forward vs Reverse KL Divergence, Fisher Information as KL Curvature, Lindley's Bayesian EIG |
+| **23** | **[Ch 23: Active Learning & Information-Theoretic Flake Culprit Search](conceptual/23_active_learning_and_culprit_search.ipynb)** | **[Ch 23 (AI)](ai/23_active_learning_and_culprit_search.ipynb)** | **[Ch 23 (Python)](python/23_active_learning_and_culprit_search.ipynb)** | **[Ch 23 (R)](r/23_active_learning_and_culprit_search.ipynb)** | Shannon Entropy in bits, Perplexity, Beta-Bernoulli changepoint posteriors, Mutual Information $I(C; Y)$ active bisection |
 
 ---
 
@@ -93,7 +94,8 @@ tracks** sharing identical filenames (`00_START_HERE.ipynb` through
 | **Marginal Likelihood & LOO-CV** (Ch 14) | Hypothesis testing ($BF_{12}$) vs. out-of-sample predictive selection (PSIS-LOO / WAIC) | Universal | **Analytical / Fast from MCMC draws** | Bayes Factors are sensitive to vague priors (Lindley's Paradox); LOO targets prediction |
 | **Dynamic Discount Filter** (Ch 15, 20) | Streaming, non-stationary environments with concept drift | $D = 1 \dots 3$ | **Instantaneous** ($\mathcal{O}(1)$ online recursion) | Memory decay factor $\gamma$ must be calibrated via prequential backtesting |
 | **Decision Theory & Tolerance** (Ch 16, 17, 21) | Translating posterior distributions into risk-optimal actions & $(p, 1-\alpha)$ guarantees | Universal | **Instantaneous** post-processing | Requires explicitly specifying real-world asymmetric loss costs |
-| **Active Information Search** (Ch 19, 22) | Sequential fix verification (SPRT) and culpable commit bisection ($I(C; Y)$) | $K$ commits | **Fast** ($\mathcal{O}(K)$ per test evaluation) | Requires historical flake baseline $p_0$ to separate noise from true regressions |
+| **Information Theory & Geometry** (Ch 22) | Deriving honest priors (MaxEnt), auditing distribution shift (KL), computing local curvature (Fisher) | Universal | **Instantaneous / Closed form** | Requires specifying physical moment constraints; KL divergence is asymmetric |
+| **Active Information Search** (Ch 19, 23) | Sequential fix verification (SPRT) and culpable commit bisection ($I(C; Y)$) | $K$ commits | **Fast** ($\mathcal{O}(K)$ per test evaluation) | Requires historical flake baseline $p_0$ to separate noise from true regressions |
 
 ---
 
@@ -104,7 +106,7 @@ bayesian-inference-intro/
 ├── README.md                                  <-- Master course syllabus & setup guide
 ├── requirements.txt                           <-- Python dependencies & Jupyter packages
 ├── install_packages.R                         <-- R package installation & IRkernel registration script
-├── conceptual/                                <-- Conceptual Track (23 chapters: 00 to 22)
+├── conceptual/                                <-- Conceptual Track (24 chapters: 00 to 23)
 │   ├── README.md
 │   ├── 00_START_HERE.ipynb
 │   ├── 01_foundations_and_conjugate_updating.ipynb
@@ -129,7 +131,7 @@ bayesian-inference-intro/
 │   ├── 20_test_promotion_heuristics_vs_bayes.ipynb
 │   ├── 21_framework_reliability_and_tolerance_contracts.ipynb
 │   └── 22_information_theory_and_culprit_search.ipynb
-├── ai/                                        <-- AI-Native Track (23 chapters: 00 to 22)
+├── ai/                                        <-- AI-Native Track (24 chapters: 00 to 23)
 │   ├── README.md
 │   ├── 00_START_HERE.ipynb
 │   ├── 01_foundations_and_conjugate_updating.ipynb
@@ -154,7 +156,7 @@ bayesian-inference-intro/
 │   ├── 20_test_promotion_heuristics_vs_bayes.ipynb
 │   ├── 21_framework_reliability_and_tolerance_contracts.ipynb
 │   └── 22_information_theory_and_culprit_search.ipynb
-├── python/                                    <-- Python Track (23 chapters: 00 to 22)
+├── python/                                    <-- Python Track (24 chapters: 00 to 23)
 │   ├── README.md
 │   ├── 00_START_HERE.ipynb
 │   ├── 01_foundations_and_conjugate_updating.ipynb
@@ -179,7 +181,7 @@ bayesian-inference-intro/
 │   ├── 20_test_promotion_heuristics_vs_bayes.ipynb
 │   ├── 21_framework_reliability_and_tolerance_contracts.ipynb
 │   └── 22_information_theory_and_culprit_search.ipynb
-└── r/                                         <-- R Track (23 chapters: 00 to 22)
+└── r/                                         <-- R Track (24 chapters: 00 to 23)
     ├── README.md
     ├── 00_START_HERE.ipynb
     ├── 01_foundations_and_conjugate_updating.ipynb
