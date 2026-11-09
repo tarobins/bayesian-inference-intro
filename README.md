@@ -18,7 +18,7 @@ To deliver deep physical intuition, AI-era epistemic architecture, and
 from-scratch mathematical rigor without compromising any dimension, the
 curriculum is organized into **four parallel, 1-to-1 synchronized companion
 tracks** sharing identical filenames (`00_START_HERE.ipynb` through
-`22_information_theory_and_culprit_search.ipynb`):
+`23_active_learning_and_culprit_search.ipynb`):
 
 * 📖 **[Conceptual Track (`conceptual/`)](conceptual/README.md)**: A pure
   reading edition designed for comprehension. Zero code cells, intuitive math
@@ -130,7 +130,8 @@ bayesian-inference-intro/
 │   ├── 19_verifying_flaky_test_fixes.ipynb
 │   ├── 20_test_promotion_heuristics_vs_bayes.ipynb
 │   ├── 21_framework_reliability_and_tolerance_contracts.ipynb
-│   └── 22_information_theory_and_culprit_search.ipynb
+│   ├── 22_foundations_of_information_theory.ipynb
+│   └── 23_active_learning_and_culprit_search.ipynb
 ├── ai/                                        <-- AI-Native Track (24 chapters: 00 to 23)
 │   ├── README.md
 │   ├── 00_START_HERE.ipynb
@@ -155,7 +156,8 @@ bayesian-inference-intro/
 │   ├── 19_verifying_flaky_test_fixes.ipynb
 │   ├── 20_test_promotion_heuristics_vs_bayes.ipynb
 │   ├── 21_framework_reliability_and_tolerance_contracts.ipynb
-│   └── 22_information_theory_and_culprit_search.ipynb
+│   ├── 22_foundations_of_information_theory.ipynb
+│   └── 23_active_learning_and_culprit_search.ipynb
 ├── python/                                    <-- Python Track (24 chapters: 00 to 23)
 │   ├── README.md
 │   ├── 00_START_HERE.ipynb
@@ -180,7 +182,8 @@ bayesian-inference-intro/
 │   ├── 19_verifying_flaky_test_fixes.ipynb
 │   ├── 20_test_promotion_heuristics_vs_bayes.ipynb
 │   ├── 21_framework_reliability_and_tolerance_contracts.ipynb
-│   └── 22_information_theory_and_culprit_search.ipynb
+│   ├── 22_foundations_of_information_theory.ipynb
+│   └── 23_active_learning_and_culprit_search.ipynb
 └── r/                                         <-- R Track (24 chapters: 00 to 23)
     ├── README.md
     ├── 00_START_HERE.ipynb
@@ -205,7 +208,8 @@ bayesian-inference-intro/
     ├── 19_verifying_flaky_test_fixes.ipynb
     ├── 20_test_promotion_heuristics_vs_bayes.ipynb
     ├── 21_framework_reliability_and_tolerance_contracts.ipynb
-    └── 22_information_theory_and_culprit_search.ipynb
+    ├── 22_foundations_of_information_theory.ipynb
+    └── 23_active_learning_and_culprit_search.ipynb
 ```
 
 ---
